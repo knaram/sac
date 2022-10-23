@@ -21,7 +21,7 @@ img {width:100%;}
 .list.card li:nth-child(2n) {margin-left:20px;}
 .list.one-card li + li {margin-top:30px;}
 .list.one-card .tit {height:20px; -webkit-line-clamp:1;}
-.list.horizontal li + li {margin-top:12px;}
+.list.horizontal li + li {margin-top:14px;}
 .list.horizontal li a {overflow:hidden; position:relative;}
 .list.horizontal img {float:left; width:144px;}
 .list.horizontal .info {float:left; width:calc(100% - 154px); vertical-align:middle; position:absolute; right:0; top:50%; transform:translateY(-50%);}
@@ -29,8 +29,7 @@ img {width:100%;}
 
 h1 {font-size:1.8rem; font-weight:500;}
 h2 {font-size:1.8rem; font-weight:700; line-height:1.8rem; margin-bottom:20px;}
-.list + h2 {margin-top:50px;}
-
+section + section {margin-top:50px;}
 
 header {width:100%; height:46px; position:relative;}
 header .logo {height:100%; text-align:center;}
@@ -88,8 +87,8 @@ footer .sns-list ul li a.pod {background-position:-108px -36px;}
 .bann-promo {margin:20px 0; display:block;}
 .main-list:first-child {margin:40px 0 50px;}
 .main-list {margin:50px 0;}
-.main-list .list-tit {font-size:1.8rem; line-height:1.8rem; font-weight:700; margin-bottom:20px; padding-right:20px;}
-.main-list .list-tit a {font-size:1.4rem; font-weight:400; opacity:.5; float:right; vertical-align:middle;}
+.main-list h2 {padding-right:20px;}
+.btn-view-all {font-size:1.4rem; font-weight:400; opacity:.5; float:right; vertical-align:middle;}
 .main-list ul {white-space:nowrap; font-size:0; overflow-x:auto; overflow-y:hidden; -ms-overflow-style: none;}
 .main-list ul::-webkit-scrollbar{display:none;}
 .main-list ul li {display:inline-block; width:165px; margin-right:14px; vertical-align:top;}
