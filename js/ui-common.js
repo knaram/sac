@@ -16,4 +16,15 @@ $(document).ready(function(){
         $(this).hide();
     })
 
+    // 비밀번호 보기/숨기기
+    $('.btn-show-pw').click(function(){
+        var targetIpt = $(this).parent().find('.ipt-txt');
+        console.log(targetIpt.attr('type'))
+        if(targetIpt.attr('type') == 'password'){
+            targetIpt.attr('type', 'text');
+        }else if(targetIpt.attr('type') == 'text'){
+            targetIpt.attr('type', 'password');
+        }
+    })
+
 })
