@@ -1,3 +1,13 @@
+function menuToggle() {
+    if($('#menu').hasClass('open')){
+        $('#menu').removeClass('open');
+        $('html').removeClass('lock');
+    }else {
+        $('#menu').addClass('open');
+        $('html').addClass('lock');
+    }
+}
+
 $(document).ready(function(){
     
     //검색어 지우기 버튼 숨기기/보이기
