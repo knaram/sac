@@ -13,9 +13,9 @@ button {border-width:0; border-radius:0; background-color:transparent; border-st
 img {vertical-align:top;}
 br {font-family:sans-serif;}
 .blind {position:absolute; clip:rect(0,0,0,0); width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important; border:0 !important; overflow:hidden !important; font-size:medium !important; line-height:1 !important;}
-::placeholder {color:rgba(255, 255, 255, 0.5);}  
-:-ms-input-placeholder {color:rgba(255, 255, 255, 0.5);}
-::-ms-input-placeholder {color:rgba(255, 255, 255, 0.5);}
+::placeholder {color:#868686;}  
+:-ms-input-placeholder {color:#868686;}
+::-ms-input-placeholder {color:#868686;}
 
 @font-face {
     font-family:'SpoqaHanSansNeo';
