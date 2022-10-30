@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">    
+    <link rel="stylesheet" href="../css/style.css">        
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/ui-common.js"></script>
+    <title>예술의 전당</title>    
+</head>
+<body>
+    <header>
+        <button class="btn-back">이전</button>
+        <h1>비밀번호 변경</h1>        
+    </header>
+
+    <div id="container" class="pb-0">
+        <div id="contents">
+            <section>
+                <form>
+                    <div class="ipt-row">
+                        <label for="name">현재 비밀번호</label>
+                        <input type="password" class="ipt-txt" name="currentPw" id="currentPw">
+                    </div>
+                    <div class="ipt-row">
+                        <label for="name">새 비밀번호</label>
+                        <input type="password" class="ipt-txt" name="newPw" id="newPw">
+                        <p class="ipt-noti">영문 대소문자, 숫자, 특수문자 (~!@#()-_+)를 포함해 9~16자리만 사용가능합니다.</p>                        
+                    </div>
+                    <div class="ipt-row">
+                        <label for="name">새 비밀번호 확인</label>
+                        <input type="password" class="ipt-txt error" name="newPwchk" id="newPwchk"> <!-- 에러일 경우 error클래스 추가 -->
+                        <p class="error">비밀번호가 일치하지 않습니다.</p>     
+                    </div>
+                    <div class="btn-box">
+                        <button type="button" class="btn btn-red">저장하기</button>
+                    </div>
+                </form>
+            </section>
+        </div> 
+    </div>
+    
+</body>
+</html>
