@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">    
     <link rel="stylesheet" href="../css/style.css">        
@@ -115,7 +115,7 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-        <!-- 메인 상단 -->
+        <!-- //메인 상단 -->
 
         <div id="contents" class="main">    <!-- 메인일 경우에만 #contents에 main클래스 추가 -->
 
@@ -124,10 +124,7 @@
             <!-- 메인 리스트 -->
             <section class="main-list">
                 <h2>시청중인 공연 <a href="#" class="btn-txt">모두 보기 &#xE001;</a></h2>
-
-                <button type="button" class="list-pagination prev">이전</button>
-                <button type="button" class="list-pagination next">다음</button>
-
+                
                 <ul>
                     <li>
                         <a href="#">
@@ -371,21 +368,23 @@
 
     <script src="../js/swiper-bundle.js"></script>
     <script>
-        /* 메인 슬라이드 */
-        var mainSliderThumb = new Swiper('.main-slider-thumb', {    //메인 이미지 슬라이드
-            loop: true,
-        });
+        $(document).ready(function(){
+            /* 메인 슬라이드 */
+            var mainSliderThumb = new Swiper('.main-slider-thumb', {    //메인 이미지 슬라이드
+                loop: true,
+            });
 
-        var mainSlider = new Swiper('.main-slider', {   //메인 공연 정보 슬라이드
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-            },
-        });
+            var mainSlider = new Swiper('.main-slider', {   //메인 공연 정보 슬라이드
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
 
-        mainSliderThumb.controller.control = mainSlider;
-        mainSlider.controller.control = mainSliderThumb;
-        /* //메인 슬라이드 */
+            mainSliderThumb.controller.control = mainSlider;
+            mainSlider.controller.control = mainSliderThumb;
+            /* //메인 슬라이드 */
+        })
     </script>
 </body>
 </html>
