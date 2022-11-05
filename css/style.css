@@ -50,6 +50,7 @@ table {width:100%; vertical-align:top; text-align:left; font-size:1.2rem; margin
 table th {background:#1E1E1E; padding:12px 15px; border:1px solid #3D3D3D;}
 table td {padding:12px 15px; border:1px solid #3D3D3D;}
 caption {font-size:0; width:0; height:0; overflow:hidden;}
+table.mt-20 + p {font-size:1.2rem;}
 
 .ipt-row {position:relative;}
 .ipt-row + .ipt-row {margin-top:16px;}
@@ -66,7 +67,7 @@ caption {font-size:0; width:0; height:0; overflow:hidden;}
 .ipt-row.with-btn .ipt-txt {width:calc(100% - 94px); margin-right:10px; float:left;}
 .ipt-row.with-btn .btn {width:84px;}
 .ipt-noti {color:#868686; line-height:1.8rem; margin-top:6px;}
-p.error {color:#E00A31;}
+p.error {color:#E00A31; margin-top:6px;}
 
 .ipt-txt {width:100%; border:none; background:#000; border:1px solid #252525; line-height:4.2rem; font-size:1.6rem; color:#fff; padding:0 14px;}
 .ipt-txt[type="password"] {padding:0 74px 0 14px;}
@@ -360,7 +361,7 @@ p.info-box {font-size:1.6rem;}
     body {font-size:1.8rem; line-height:2.8rem;}
     header {height:100px; border-bottom:1px solid #3D3D3D;}
     #container {max-width:1280px; min-height:1040px; margin:0 auto; padding:100px 0 80px;}
-    #contents {padding:70px 00px 0;} 
+    #contents {padding:70px 00px 0; overflow:hidden;} 
     #contents.main {padding:80px 0 0; overflow:visible;}
     .w1220 {width:1220px;}
     .w960 {width:960px;}
@@ -402,6 +403,9 @@ p.info-box {font-size:1.6rem;}
     h2 {font-size:2.6rem; line-height:100%; margin:0 0 30px;}
     form h2 {margin:0 0 40px;}
     h3 {font-size:2rem; margin:50px 0 12px; line-height:100%;}
+
+    table {font-size:1.6rem;}
+    table.mt-20 + p {font-size:1.5rem;}
 
     header .logo {display:inline-block;}
     header h1 {display:none;}
@@ -490,12 +494,10 @@ p.info-box {font-size:1.6rem;}
     .terms-box button {width:119px; height:39px; font-size:1.5rem; line-height:100%; margin:0 0 20px 20px;}
     .txt-box label {margin:0 20px 0 0; font-size:2rem; padding:0 !important;}
     .txt-box label + input + label {margin-left:0;}
-    .join .btn-box,
-    .join-agree .btn-box,
-    .my-genres .btn-box {border-top:0; overflow:hidden;}
-    .join .btn,
-    .join-agree .btn-box .btn,
-    .my-genres .btn-box .btn {width:130px; float:right;}
+    section .btn-box {border-top:0; overflow:hidden; margin-top:50px; float:right;}
+    section .btn-box .btn {width:130px;}
+    section .btn-box .btn + .btn {margin-left:10px;}
+    section .btn-box .btn-xsmall {width:90px;}
 
     .real-auth {position:relative;}    
     .real-auth .btn-box {display:flex; margin:70px auto 0; width:620px;}
@@ -533,6 +535,16 @@ p.info-box {font-size:1.6rem;}
 
     .modal-title {font-size:3rem; padding:70px;}
     .modal-cont {padding:0 70px 70px;}
-
     .modal-cont .subscribe.buy .list-tit {margin-top:60px;}
+
+    .my-info {overflow:hidden;}
+    .my-info h2 {float:left; width:300px; font-size:2rem; vertical-align:top; padding-top:16px;}
+    .my-info h2 .btn-txt {display:block; width:100%; margin-top:16px; font-size:1.8rem;}
+    .my-info .info-box {float:left; width:calc(100% - 300px); padding:30px; transform:none; vertical-align:top;}
+    .info-box > li + li {margin-top:30px;}
+    .info-box .tit {margin-bottom:10px; font-size:1.8rem; line-height:100%;}
+    p.info-box,
+    .info-box .txt {font-size:2rem; line-height:100%;}
+    .info-box .sub-txt {font-size:1.8rem;}
+    .chk-list {font-size:2rem;}
 }
