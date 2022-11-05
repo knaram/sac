@@ -13,15 +13,68 @@
 </head>
 <body>
     <header>
-        <button class="btn-back">이전</button>
-        <h1>장르</h1>        
+        <div class="inner">
+            <div class="logo"><img src="../images/logo.png" alt="예술의 전당 Seoul Arts Center"></div>
+
+            <!-- GNB -->
+            <div id="nav">
+                <a class="home selected" href="#">홈</a>    <!-- 선택된 메뉴에 selected 클래스 추가 -->
+                <a class="genre" href="#">장르</a>
+                <a class="live" href="#">LIVE</a>
+                <a class="search" href="#">검색</a>
+            </div>
+            <!-- //GNB -->
+
+            <h1>회원가입</h1>
+            <button type="button" class="btn-util-menu" onclick="menuToggle()">메뉴</button>
+        </div>
     </header>
 
+    <!-- 메뉴 -->
+    <div id="menu">
+        <div class="menu-header">
+            <p class="tit">메뉴</p>
+            <button type="button" class="btn-close" onclick="menuToggle()">닫기</button>
+        </div>
+        <div class="contents">
+            <!-- 로그인 전 -->
+            <div class="account-util">
+                <p class="txt">로그인하세요.</p>
+                <button type="button" class="btn btn-red">로그인</button>
+                <p>아직 계정이 없습니까? <a class="#">지금 무료 회원가입!</a></p>
+            </div>
+            <!-- //로그인 전 -->
+
+            <!-- 로그인 후 -->
+            <div class="account-util">
+                <p class="txt">다음 계정으로 로그인이 되었습니다.</p>
+                <p class="name"><em>홍길동</em>님 (hongkildong)</p>
+                <dl class="subs-box">
+                    <dt>나의 시청권</dt>
+                    <dd>구독중인 시청권이 없습니다</dd>
+                </dl>
+            </div>
+            <!-- //로그인 전 -->
+
+            <div class="links">
+                <a href="#">회원정보</a>
+                <a href="#">시청권 구매</a>
+                <a href="#">공지사항</a>
+                <a href="#">이용안내</a>
+                <a href="#">고객센터</a>
+                <a href="#">설정</a>
+                <a href="#" class="no-icon">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- //메뉴 -->
+
     <div id="container">
-        <div id="contents">            
+        <div id="contents" class="w620 my-genres">        
+            <p class="page-title">회원가입</p>    
             <h2>관심장르 2가지(선택)</h2>
-            <div class="btn-box">
-                <input type="checkbox" class="btn" name="genre" id="genreA"><label for="genreA">뮤지컬</label>
+            <div class="btn-box type2">
+                <input type="checkbox" class="btn" name="genre" id="genreA" disabled><label for="genreA">뮤지컬 - 선택불가 버튼</label> <!-- 선택불가일 경우 disabled 속성 추가 -->
                 <input type="checkbox" class="btn" name="genre" id="genreB"><label for="genreB">오페라</label>
                 <input type="checkbox" class="btn" name="genre" id="genreC"><label for="genreC">클래식</label>
                 <input type="checkbox" class="btn" name="genre" id="genreD"><label for="genreD">무용</label>
@@ -39,5 +92,37 @@
         </div>
     </div>
     
+    <footer class="pc">
+        <div class="inner">
+            <div class="logo"><img src="../images/logo_gray.png" alt="미디어 아트센터 Seoul Art Center"></div>
+            <div class="info-wrap">
+                <div class="links">
+                    <a href="#">서비스 이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <address>
+                    (우) 06757 서울시 서초구 남부순환로 2406 예술의전당<br><br class="pc">
+                    대표자 장형준  사업자등록번호 214-82-00264<br>
+                    통신판매업신고 서초 제 0706호<br>
+                    콜센터 02-580-1300 (09:00~20:00, 연중무휴)<br><br class="pc">
+                    copyrightⓒ2022 Seoul Arts Center. All rights Reserved.
+                </address>
+            </div>
+            <div class="sns-list">
+                <p>Seoul Arts Center SNS</p>
+                <ul>
+                    <li><a href="#" class="yt">youtube</a></li>
+                    <li><a href="#" class="fb">facebook</a></li>
+                    <li><a href="#" class="insta">instagram</a></li>
+                    <li><a href="#" class="tw">twitter</a></li>
+                    <li><a href="#" class="nblog">naver blog</a></li>
+                    <li><a href="#" class="ntv">naver TV</a></li>
+                    <li><a href="#" class="npost">naver post</a></li>
+                    <li><a href="#" class="pod">podbbang</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

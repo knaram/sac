@@ -1,3 +1,4 @@
+//햄버거 메뉴 토글
 function menuToggle() {
     if($('#menu').hasClass('open')){
         $('#menu').removeClass('open');
@@ -8,8 +9,18 @@ function menuToggle() {
     }
 }
 
-$(document).ready(function(){
-    
+//모달 열기
+function openModal(e) {  
+    var modalId = e;
+    $('.modal-wrap[data-id=' + modalId + ']').show();
+}
+
+//모달 닫기
+function closeModal() { 
+    $(event.target).parent().parent().hide();
+}
+
+$(document).ready(function(){   
     //검색어 지우기 버튼 숨기기/보이기
     $('.ipt-search .ipt-txt').bind("focus change keyup paste", function(){
         if($(this).val() == ''){
