@@ -25,7 +25,8 @@
             </div>
             <!-- //GNB -->
 
-            <h1>비밀번호 변경</h1>
+            <button type="button" class="btn-back">이전</button>
+            <h1>1:1 문의</h1>
             <button type="button" class="btn-util-menu" onclick="menuToggle()">메뉴</button>
         </div>
     </header>
@@ -70,64 +71,51 @@
     <!-- //메뉴 -->
 
     <div id="container">
-        <div id="contents" class="w620">
-            <p class="page-title">비밀번호 변경</p>
-            <section>
+        <div id="contents" class="w960">
+            <p class="page-title">1:1 문의</p>
+            <h2>문의하기</h2>
+            <section class="qna">
                 <form>
                     <div class="ipt-row">
-                        <label for="name">현재 비밀번호</label>
-                        <input type="password" class="ipt-txt" name="currentPw" id="currentPw">
+                        <label for="title">문의 제목</label>
+                        <input type="text" class="ipt-txt">
                     </div>
                     <div class="ipt-row">
-                        <label for="name">새 비밀번호</label>
-                        <input type="password" class="ipt-txt" name="newPw" id="newPw">
-                        <p class="ipt-noti">영문 대소문자, 숫자, 특수문자 (~!@#()-_+)를 포함해 9~16자리만 사용가능합니다.</p>                        
+                        <label for="txt">문의 내용</label>
+                        <textarea name="txt" id="txt"></textarea>
+                        <p class="ipt-noti">1:1 문의는 1000자까지만 등록이 가능합니다.</p>
                     </div>
+
+                    <h3>[필수] 개인정보 수집 및 이용 동의</h3>
+                    <p>1:1 문의 서비스를 위하여 개인정보보호법에 따라 아래와 같이 개인정보를 수집·이용하고자 합니다. 내용을 자세히 읽으신 후 동의 여부를 결정하여 주십시오.</p>
+                    <table>
+                        <caption>개인정보 수집 항목, 이용 목적, 보유기간 안내</caption>
+                        <tbody>
+                            <tr>
+                                <th>항목</th>
+                                <td>성명, 생년월일, 성별, 주소, 휴대전화번호, 이메일</td>                                
+                            </tr>
+                            <tr>
+                                <th>수집 · 이용 목적</th>
+                                <td>개별/구독권 구매 및 회원서비스 제공</td>                                
+                            </tr>
+                            <tr>
+                                <th>보유기간</th>
+                                <td>5년(구매이력 있는 경우)<br>1년(단순 가입자)</td>                                
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>※ 동의를 거부할 경우 1:1 문의가 불가합니다.</p>
                     <div class="ipt-row">
-                        <label for="name">새 비밀번호 확인</label>
-                        <input type="password" class="ipt-txt error" name="newPwchk" id="newPwchk"> <!-- 에러일 경우 error클래스 추가 -->
-                        <p class="error">비밀번호가 일치하지 않습니다.</p>     
+                        <input type="checkbox" name="agree" id="agree" class="type2"><label for="agree">개인정보 수집 및 이용에 대해 동의합니다.</label>
                     </div>
+                    
                     <div class="btn-box">
-                        <button type="button" class="btn btn-xsmall pc">취소</button>
-                        <button type="button" class="btn btn-red">저장하기</button>
+                        <button type="button" class="btn btn-red">등록하기</button>
                     </div>
                 </form>
             </section>
         </div> 
     </div>
-    
-    <footer class="pc">
-        <div class="inner">
-            <div class="logo"><img src="../images/logo_gray.png" alt="미디어 아트센터 Seoul Art Center"></div>
-            <div class="info-wrap">
-                <div class="links">
-                    <a href="#">서비스 이용약관</a>
-                    <a href="#">개인정보처리방침</a>
-                    <a href="#">FAQ</a>
-                </div>
-                <address>
-                    (우) 06757 서울시 서초구 남부순환로 2406 예술의전당<br><br class="pc">
-                    대표자 장형준  사업자등록번호 214-82-00264<br>
-                    통신판매업신고 서초 제 0706호<br>
-                    콜센터 02-580-1300 (09:00~20:00, 연중무휴)<br><br class="pc">
-                    copyrightⓒ2022 Seoul Arts Center. All rights Reserved.
-                </address>
-            </div>
-            <div class="sns-list">
-                <p>Seoul Arts Center SNS</p>
-                <ul>
-                    <li><a href="#" class="yt">youtube</a></li>
-                    <li><a href="#" class="fb">facebook</a></li>
-                    <li><a href="#" class="insta">instagram</a></li>
-                    <li><a href="#" class="tw">twitter</a></li>
-                    <li><a href="#" class="nblog">naver blog</a></li>
-                    <li><a href="#" class="ntv">naver TV</a></li>
-                    <li><a href="#" class="npost">naver post</a></li>
-                    <li><a href="#" class="pod">podbbang</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
