@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">    
+    <link rel="stylesheet" href="../css/style.css">        
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/ui-common.js"></script>
+    <title>예술의 전당</title>    
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <div class="logo"><img src="../images/logo.png" alt="예술의 전당 Seoul Arts Center"></div>
+
+            <!-- GNB -->
+            <div id="nav">
+                <a class="home" href="#">홈</a>    <!-- 선택된 메뉴에 selected 클래스 추가 -->
+                <a class="genre" href="#">장르</a>
+                <a class="live" href="#">LIVE</a>
+                <a class="search" href="#">검색</a>
+            </div>
+            <!-- //GNB -->
+
+            <button type="button" class="btn-back">이전</button>
+            <h1>자주 묻는 질문</h1>
+            <button type="button" class="btn-util-menu" onclick="menuToggle()">메뉴</button>
+        </div>
+    </header>
+
+    <!-- 메뉴 -->
+    <div id="menu">
+        <div class="menu-header">
+            <p class="tit">메뉴</p>
+            <button type="button" class="btn-close" onclick="menuToggle()">닫기</button>
+        </div>
+        <div class="contents">
+            <!-- 로그인 전 -->
+            <div class="account-util">
+                <p class="txt">로그인하세요.</p>
+                <button type="button" class="btn btn-red">로그인</button>
+                <p>아직 계정이 없습니까? <a class="#">지금 무료 회원가입!</a></p>
+            </div>
+            <!-- //로그인 전 -->
+
+            <!-- 로그인 후 -->
+            <div class="account-util">
+                <p class="txt">다음 계정으로 로그인이 되었습니다.</p>
+                <p class="name"><em>홍길동</em>님 (hongkildong)</p>
+                <dl class="subs-box">
+                    <dt>나의 시청권</dt>
+                    <dd>구독중인 시청권이 없습니다</dd>
+                </dl>
+            </div>
+            <!-- //로그인 전 -->
+
+            <div class="links">
+                <a href="#">회원정보</a>
+                <a href="#">시청권 구매</a>
+                <a href="#">공지사항</a>
+                <a href="#">이용안내</a>
+                <a href="#">고객센터</a>
+                <a href="#">설정</a>
+                <a href="#" class="no-icon">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- //메뉴 -->
+
+    <div id="container">
+        <div id="contents" class="w960">
+            <p class="page-title">고객센터</p>
+            <ul class="inner-menu">
+                <li><a href="#">자주 묻는 질문</a></li>
+                <li><a href="#" class="selected">1:1 문의</a></li>
+                <li><a href="#">약관 및 정책</a></li>
+            </ul>
+
+            <section class="help">
+                <div class="txt-box bg-gray">
+                    <p>
+                        고객님의 작은 소리 하나도 소중하게 듣는 Digital예술의전당이 되겠습니다.<br>
+                        궁금한 점, 하고싶은 이야기를 남겨주세요. 쉽고! 빠르게! 해결해 드리겠습니다. 단, 저속한 표현을 비롯한 홍보, 광고성 등의 글은 임의로 삭제될 수 있습니다.<br>
+                        ※ 매주 일, 월요일은 예술의전당 정기휴무일이므로 답변이 늦어질 수 있는 점 양해 부탁드립니다.<br>
+                        ※ 남기신 내용이 부패 · 공익신고에 해당될 경우, 관련법(「부패방지권익위법」, 「공익신고자 보호법」등)에 따라 신고인과 내용은 철저히 보호됩니다.
+                    </p>
+                </div>
+                <div class="btn-box mt-20">
+                    <a href="#" class="btn btn-red">문의하기</a>
+                </div>
+
+                <h2 class="mt-30">내 문의내역</h2>
+                <ul class="list text">
+                    <li>
+                        <a href="#">
+                            <span class="tit">공연 문의합니다</span>
+                            <span class="date">2022.09.19</span>
+                            <span class="status">문의</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="tit">공연 문의합니다 공연 문의합니다 공연 문의합니다 공연 문의합니다</span>
+                            <span class="date">2022.09.19</span>
+                            <span class="status txt-red">답변</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="tit">공연 문의합니다</span>
+                            <span class="date">2022.09.19</span>
+                            <span class="status">문의</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="tit">공연 문의합니다</span>
+                            <span class="date">2022.09.19</span>
+                            <span class="status txt-red">답변</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="tit">공연 문의합니다</span>
+                            <span class="date">2022.09.19</span>
+                            <span class="status">문의</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="tit">공연 문의합니다</span>
+                            <span class="date">2022.09.19</span>
+                            <span class="status txt-red">답변</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="pagination">
+                    <a href="#">&#xE000;</a>
+                    <a href="#" class="selected">1</a>  <!-- 선택된 페이지에 selected 클래스 추가 -->
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">&#xE001;</a>
+                </div>
+            </section>
+        </div> 
+    </div>
+</body>
+</html>

@@ -21,10 +21,11 @@ img {width:100%;}
 .pb-0 {padding-bottom:0 !important;}
 .pl-20 {padding-left:20px !important;}
 .mt-20 {margin-top:20px !important;}
+.mt-30 {margin-top:30px !important;}
 
 .has-brt {border-top:1px solid #252525; padding-top:20px;}
 
-.btn {width:100%; background:#3D3D3D; border-radius:4px; line-height:4.4rem; height:44px; padding:0 12px; font-size:1.5rem; transition:all .3s;}
+.btn {display:inline-block; width:100%; background:#3D3D3D; border-radius:4px; line-height:4.4rem; height:44px; padding:0 12px; font-size:1.5rem; transition:all .3s; box-sizing:border-box; text-align:center;}
 .btn + .btn {margin-top:10px;}
 .btn.selected {background:#E00A31;}
 .btn-red {background:#E00A31;}
@@ -126,8 +127,8 @@ input[type='checkbox']:checked.toggle + label .toggle:before {left:17px;}
 .list.text li:last-child {border-bottom:1px solid #252525;}
 .list.text li a {display:block; position:relative; padding:16px 0;}
 .list.text li a:before {content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:5px; height:10px; background:url('../images/icons.png') -83px -6px no-repeat; background-size:auto 80px;}
-.list.text .tit {max-height:35px; height:auto; margin:0; padding-right:40px;}
-.list.text.accordion li {padding:0;}
+.list.text .tit {max-height:35px; height:auto; margin:0; padding-right:50px;}
+.list.text.accordion li {padding:0; border-top:0; border-bottom:1px solid #252525;}
 .list.text.accordion li.open {padding:0 0 20px;}
 .list.text.accordion .tit {position:relative; display:block; width:100%; padding:20px 40px 20px 0; cursor:pointer; line-height:2rem; max-height:none; box-sizing:border-box;}
 .list.text.accordion .tit:before {content:''; position:absolute; top:50%; right:5px; margin-top:-6px; width:12px; height:12px; background:url('../images/icon_acc.png') no-repeat; background-size:auto 12px;}
@@ -138,6 +139,20 @@ input[type='checkbox']:checked.toggle + label .toggle:before {left:17px;}
 
 .list.menu a {display:block; position:relative; padding:15px 0; font-size:1.6rem;}
 .list.menu a:before {content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:5px; height:10px; background:url('../images/icons.png') -83px -6px no-repeat; background-size:auto 80px;} 
+
+.pagination {display:none; text-align:center; margin-top:40px; font-size:0;}
+.pagination a {display:inline-block; width:20px; height:20px; font-size:1.6rem; line-height:2rem; vertical-align:middle;}
+.pagination a + a {margin-left:10px;}
+.pagination a.selected {color:#E00A31;}
+
+.board-detail .title {border-top:1px solid #252525; padding:16px 0;}
+.board-detail .title p {font-size:1.6rem;}
+.board-detail .title span {font-size:1.2rem; color:#868686; margin-top:6px;}
+.board-detail .conts {border-top:1px solid #252525; padding:16px 0;}
+
+.inner-menu {display:none; font-size:0; padding-bottom:40px; border-bottom:1px solid #252525;}
+.inner-menu li {display:inline-block; font-size:2rem; font-weight:500; margin-right:40px;}
+.inner-menu .selected {color:#E00A31;}
 
 .flag {display:inline-block; color:#E00A31; border:1px solid #E00A31; padding:5px 7px; margin-bottom:10px; font-size:1.3rem; line-height:1.3rem;}
 .flag + .flag {margin-left:6px;}
@@ -344,19 +359,11 @@ p.info-box {font-size:1.6rem;}
 .setting-box dd {display:inline-block; width:calc(100% - 100px); text-align:right; font-size:1.3rem; color:#868686; vertical-align:middle; line-height:2rem;}
 .setting-box dd + dt + dd {margin-top:10px;}
 
-.pagination {display:none; text-align:center; margin-top:40px; font-size:0;}
-.pagination a {display:inline-block; width:20px; height:20px; font-size:1.6rem; line-height:2rem; vertical-align:middle;}
-.pagination a + a {margin-left:10px;}
-.pagination a.selected {color:#E00A31;}
+.help .txt-box p {font-size:1.3rem; line-height:1.6rem;}
+.help .list.text a:before {content:none;}
+.help .list.text .tit {overflow:visible; text-overflow:initial; height:auto; max-height:none; -webkit-line-clamp:initial;}
+.help .list.text .status {position:absolute; right:0; top:50%; transform:translateY(-50%); font-size:1.4rem;}
 
-.board-detail .title {border-top:1px solid #252525; padding:16px 0;}
-.board-detail .title p {font-size:1.6rem;}
-.board-detail .title span {font-size:1.2rem; color:#868686; margin-top:6px;}
-.board-detail .conts {border-top:1px solid #252525; padding:16px 0;}
-
-.inner-menu {display:none; font-size:0; margin-bottom:40px;}
-.inner-menu li {display:inline-block; font-size:2rem; font-weight:500; margin-right:40px;}
-.inner-menu .selected {color:#E00A31;}
 
 
 @media only screen and (min-width:960px){
@@ -416,6 +423,15 @@ p.info-box {font-size:1.6rem;}
     .list.text.accordion li.open .tit:before {margin-top:-2px;}
     .list.text.accordion li.open .tit {padding:26px 40px 12px 0;}
     .list.text.accordion .conts {font-size:1.6rem; padding:0 40px 0 0;}
+
+    .help .txt-box {padding:30px 40px;}
+    .help .txt-box p {font-size:1.6rem; line-height:2.6rem;}    
+    section.help .btn-box {display:block; width:100%; text-align:right;}
+    .help .btn-red {width:130px;}
+    .help h2 {font-size:2.4rem; margin-bottom:20px;}
+    .help .list.text .tit {width:calc(100% - 200px);}
+    .help .list.text .date {position:absolute; right:0; top:50%; transform:translateY(-50%); width:90px; text-align:right;}
+    .help .list.text .status {position:absolute; right:120px; top:50%; transform:translateY(-50%); text-align:center; width:50px;}
 }
 
 
@@ -550,7 +566,7 @@ p.info-box {font-size:1.6rem;}
     .txt-box {font-size:1.8rem; text-align:left; padding:20px 0; margin-bottom:10px;}
     .txt-box p {display:inline-block; margin:0; font-size:1.8rem; line-height:2rem;}
     .txt-box p + input + label {margin-left:50px;}
-    .txt-box.bg-gray {text-align:center; padding:32px 80px;}    
+    .txt-box.bg-gray {text-align:center; padding:30px 40px;}    
     .terms-box .terms {height:360px;}
     .terms-box pre {font-size:1.5rem; line-height:2rem; padding:20px;}
     .terms-box button {width:119px; height:39px; font-size:1.5rem; line-height:100%; margin:0 0 20px 20px;}
