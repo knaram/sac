@@ -48,4 +48,12 @@ $(document).ready(function(){
         }
     })
 
+    //아코디언 열기/닫기
+    $('.list.accordion .tit').click(function(){
+        if($(this).parent().hasClass('open')){
+            $(this).parent().removeClass('open');
+        }else {
+            $(this).parent().addClass('open');
+        }
+    })
 })
