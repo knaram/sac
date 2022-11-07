@@ -69,8 +69,9 @@
     </div>
     <!-- //메뉴 -->
 
-    <div id="container">
-        <!-- 메인 상단 -->
+    <div id="container" class="main">    <!-- 메인일 경우에만 main클래스 추가 -->
+        <div class="inner">slide</div>
+        <!-- 메인 상단 --
         <div class="slider-wrap">
             <div class="main-slider-thumb swiper">
                 <div class="swiper-wrapper">
@@ -118,7 +119,7 @@
         </div>
         <!-- //메인 상단 -->
 
-        <div id="contents" class="main">    <!-- 메인일 경우에만 #contents에 main클래스 추가 -->
+        <div id="contents">
 
             <a href="#" class="bann-promo" style="background-color:#0063B1;"><img src="../images/@temp_02.png" alt="프로모션 배너"></a> <!-- 배너 -->
 
@@ -126,244 +127,354 @@
             <section class="main-list">
                 <h2>시청중인 공연 <a href="#" class="btn-txt">모두 보기 &#xE001;</a></h2>
                 
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_03.png" alt="">
-                            <span class="info">
-                                <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_04.png" alt="">
-                            <span class="info">
-                                <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_05.png" alt="">
-                            <span class="info">
-                                <span class="tit">디스커버 로맨티시즘</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_06.png" alt="">
-                            <span class="info">
-                                <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_03.png" alt="">
-                            <span class="info">
-                                <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_04.png" alt="">
-                            <span class="info">
-                                <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
+                <div class="main-list-wrap">
+                    <div class="swiper main-list-swiper" id="list01">   <!-- 메인 리스트마다 고유 ID 필요, ID는 하단 swiper-button-next/swiper-button-prev에 클래스로 동일하게 기재 -->
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_05.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">디스커버 로맨티시즘</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_06.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-button-next list01"></div>
+                    <div class="swiper-button-prev list01"></div>
+                </div>
             </section>
             <!-- //메인 리스트 -->
 
+            <!-- 메인 리스트 -->
             <section class="main-list">
                 <h2>인기 공연 <a href="#" class="btn-txt">모두 보기 &#xE001;</a></h2>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_06.png" alt="">
-                            <span class="info">
-                                <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_05.png" alt="">
-                            <span class="info">
-                                <span class="tit">디스커버 로맨티시즘</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_04.png" alt="">
-                        <span class="info">
-                            <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
-                        </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_03.png" alt="">
-                        <span class="info">
-                            <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
-                        </span>
-                        </a>
-                    </li>                    
-                </ul>
+                
+                <div class="main-list-wrap">
+                    <div class="swiper main-list-swiper" id="list02">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_05.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">디스커버 로맨티시즘</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_06.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-button-next list02"></div>
+                    <div class="swiper-button-prev list02"></div>
+                </div>
             </section>
+            <!-- //메인 리스트 -->
 
+            <!-- 메인 리스트 -->
             <section class="main-list">
                 <h2>추천 공연 <a href="#" class="btn-txt">모두 보기 &#xE001;</a></h2>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_03.png" alt="">
-                            <span class="info">
-                                <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_04.png" alt="">
-                            <span class="info">
-                                <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_05.png" alt="">
-                            <span class="info">
-                                <span class="tit">디스커버 로맨티시즘</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_06.png" alt="">
-                            <span class="info">
-                                <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
-                            </span>
-                        </a>
-                    </li>                    
-                </ul>
+                
+                <div class="main-list-wrap">
+                    <div class="swiper main-list-swiper" id="list03">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_05.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">디스커버 로맨티시즘</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_06.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-button-next list03"></div>
+                    <div class="swiper-button-prev list03"></div>
+                </div>
             </section>
+            <!-- //메인 리스트 -->
 
+            <!-- 메인 리스트 -->
             <a href="#" class="bann-promo" style="background-color:#0063B1;"><img src="../images/@temp_02.png" alt="프로모션 배너"></a>
 
             <section class="main-list">
                 <h2>인기 공연 <a href="#" class="btn-txt">모두 보기 &#xE001;</a></h2>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_06.png" alt="">
-                            <span class="info">
-                                <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_05.png" alt="">
-                            <span class="info">
-                                <span class="tit">디스커버 로맨티시즘</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_04.png" alt="">
-                            <span class="info">
-                                <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_03.png" alt="">
-                            <span class="info">
-                                <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
-                            </span>
-                        </a>
-                    </li>                    
-                </ul>
+                
+                <div class="main-list-wrap">
+                    <div class="swiper main-list-swiper" id="list04">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_06.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_05.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">디스커버 로맨티시즘</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-button-next list04"></div>
+                    <div class="swiper-button-prev list04"></div>
+                </div>
             </section>
+            <!-- //메인 리스트 -->
 
+            <!-- 메인 리스트 -->
             <section class="main-list">
                 <h2>추천 공연 <a href="#" class="btn-txt">모두 보기 &#xE001;</a></h2>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_03.png" alt="">
-                            <span class="info">
-                                <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_04.png" alt="">
-                            <span class="info">
-                                <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_05.png" alt="">
-                            <span class="info">
-                                <span class="tit">디스커버 로맨티시즘</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../images/@temp_06.png" alt="">
-                            <span class="info">
-                                <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
-                            </span>
-                        </a>
-                    </li>                    
-                </ul>
+                
+                <div class="main-list-wrap">
+                    <div class="swiper main-list-swiper" id="list05">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_06.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <img src="../images/@temp_05.png" alt="">
+                                    <span class="info">
+                                        <span class="tit">디스커버 로맨티시즘</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-button-next list05"></div>
+                    <div class="swiper-button-prev list05"></div>
+                </div>    
             </section>
+            <!-- //메인 리스트 -->
 
-            <a href="#" class="bann-promo"><img src="../images/@temp_02.png" alt="프로모션 배너"></a> <!-- 배너 -->
-            <a href="#" class="bann-promo"><img src="../images/@temp_02.png" alt="프로모션 배너"></a> <!-- 배너 -->
+            <a href="#" class="bann-promo" style="background-color:#0063B1;"><img src="../images/@temp_02.png" alt="프로모션 배너"></a> <!-- 배너 -->
+            <a href="#" class="bann-promo" style="background-color:#0063B1;"><img src="../images/@temp_02.png" alt="프로모션 배너"></a> <!-- 배너 -->
         </div>
     </div>
 
-    <footer>
-        <div class="logo"><img src="../images/logo_gray.png" alt="미디어 아트센터 Seoul Art Center"></div>
-        <div class="links">
-            <a href="#">서비스 이용약관</a>
-            <a href="#">개인정보처리방침</a>
-            <a href="#">FAQ</a>
-        </div>
-        <address>
-            (우) 06757 서울시 서초구 남부순환로 2406 예술의전당<br>
-            대표자 장형준  사업자등록번호 214-82-00264<br>
-            통신판매업신고 서초 제 0706호<br>
-            콜센터 02-580-1300 (09:00~20:00, 연중무휴)<br>
-            copyrightⓒ2022 Seoul Arts Center. All rights Reserved.
-        </address>
-        <div class="sns-list">
-            <p>Seoul Arts Center SNS</p>
-            <ul>
-                <li><a href="#" class="yt">youtube</a></li>
-                <li><a href="#" class="fb">facebook</a></li>
-                <li><a href="#" class="insta">instagram</a></li>
-                <li><a href="#" class="tw">twitter</a></li>
-                <li><a href="#" class="nblog">naver blog</a></li>
-                <li><a href="#" class="ntv">naver TV</a></li>
-                <li><a href="#" class="npost">naver post</a></li>
-                <li><a href="#" class="pod">podbbang</a></li>
-            </ul>
+    <footer class="pc">
+        <div class="inner">
+            <div class="logo"><img src="../images/logo_gray.png" alt="미디어 아트센터 Seoul Art Center"></div>
+            <div class="info-wrap">
+                <div class="links">
+                    <a href="#">서비스 이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <address>
+                    (우) 06757 서울시 서초구 남부순환로 2406 예술의전당<br><br class="pc">
+                    대표자 장형준  사업자등록번호 214-82-00264<br>
+                    통신판매업신고 서초 제 0706호<br>
+                    콜센터 02-580-1300 (09:00~20:00, 연중무휴)<br><br class="pc">
+                    copyrightⓒ2022 Seoul Arts Center. All rights Reserved.
+                </address>
+            </div>
+            <div class="sns-list">
+                <p>Seoul Arts Center SNS</p>
+                <ul>
+                    <li><a href="#" class="yt">youtube</a></li>
+                    <li><a href="#" class="fb">facebook</a></li>
+                    <li><a href="#" class="insta">instagram</a></li>
+                    <li><a href="#" class="tw">twitter</a></li>
+                    <li><a href="#" class="nblog">naver blog</a></li>
+                    <li><a href="#" class="ntv">naver TV</a></li>
+                    <li><a href="#" class="npost">naver post</a></li>
+                    <li><a href="#" class="pod">podbbang</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 
@@ -385,6 +496,19 @@
             mainSliderThumb.controller.control = mainSlider;
             mainSlider.controller.control = mainSliderThumb;
             /* //메인 슬라이드 */
+
+            var listSwipers = [];
+            $('.main-list-swiper').each(function(i) {
+                var thisID = $(this).attr('id'); //아이디 가져오기
+
+                listSwipers[i] = new Swiper('#'+thisID, {	//⭐아이디 설정
+                    slidesPerView: 'auto',
+                    navigation: {
+                        nextEl: ".swiper-button-next."+thisID,
+                        prevEl: ".swiper-button-prev."+thisID,
+                    },
+                });
+            });
         })
     </script>
 </body>
