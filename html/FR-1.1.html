@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">    
+    <link rel="stylesheet" href="https://unpkg.com/@egjs/flicking/dist/flicking.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/@egjs/flicking/dist/flicking-inline.css" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/style.css">        
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script src="../js/swiper-bundle.js"></script>
@@ -71,7 +73,27 @@
     <!-- //메뉴 -->
 
     <div id="container" class="main">    <!-- 메인일 경우에만 main클래스 추가 -->
-        <div class="inner">slide</div>
+        <div class="inner">
+            <div id="flick" class="flicking-viewport main-slider">
+                <div id="flicking-camera" class="flicking-camera">
+                    <div class="flicking-panel">
+                        <img src="../images/@temp_01.png" alt="">
+                        <div class="slide-info">
+                            <span class="flag">클래식</span>
+                            <p class="tit">국립심포니 : DRs Pick II - 수수께끼</p>
+                            <p class="txt">라벨의 마법같은 음악과 엘가의 따스함을 연주한다. 익살스러움을 가미한 이번 정기연주회의 프로그램은 8월의 무더위를 날리기에 적절한 음악적 유머러스함까지 갖추었다. 무겁기만한 클래식 음악은 벗어던지고, 작곡가가 무슨 이야기를 할까 기대되는, 그런 재미있는 클래식 음악의 매력을 어필한다. 사실 라벨의 어미 거위 모음곡도, 엘가의 수수께끼 변주곡도 작곡가와 관련된 누군가를 기쁘게 해주기 위해 작곡된 음악이라고 하니, 국립심포니의 연주도 관객들을 기쁘게 만들 수 있지 않을까 기대해 본다.</p>
+                            <button type="button" class="btn btn-red btn-small">상세 보기</button>
+                        </div>
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="../images/@temp_01.png" alt="">
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="../images/@temp_01.png" alt="">
+                    </div>
+                </div>
+            </div>            
+        </div>
         <!-- 메인 상단 --
         <div class="slider-wrap">
             <div class="main-slider-thumb swiper">
@@ -479,24 +501,14 @@
         </div>
     </footer>
 
+
+    <script src="https://unpkg.com/@egjs/flicking/dist/flicking.pkgd.min.js" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
-            /* 메인 슬라이드 */
-            var mainSliderThumb = new Swiper('.main-slider-thumb', {    //메인 이미지 슬라이드
-                loop: true,
+
+            const flicking = new Flicking("#flick", {
+                renderOnlyVisible: true
             });
-
-            var mainSlider = new Swiper('.main-slider', {   //메인 공연 정보 슬라이드
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-            });
-
-            mainSliderThumb.controller.control = mainSlider;
-            mainSlider.controller.control = mainSliderThumb;
-            /* //메인 슬라이드 */
-
             
             // 메인 리스트 스와이퍼
             var listSwipers = [];
@@ -513,5 +525,27 @@
             });
         })
     </script>
+
+
+
+
+<script>
+    
+</script>
+</body>
+
+</html>
+<style>
+    .flicking-panel {
+        align-items: flex-end;
+        box-sizing: border-box;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        background-color: black;
+    }
+</style>
 </body>
 </html>

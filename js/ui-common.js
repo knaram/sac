@@ -11,13 +11,20 @@ function menuToggle() {
 
 //모달 열기
 function openModal(e) {  
-    var modalId = e;
-    $('.modal-wrap[data-id=' + modalId + ']').show();
+    var modalId = e;    
+    if($('.modal-wrap[data-id=' + modalId + '] .modal').hasClass('toast')){
+        $('.modal-wrap[data-id=' + modalId + ']').fadeIn();
+        setTimeout(function(){
+            $('.modal-wrap[data-id=' + modalId + ']').fadeOut();
+        }, 3000);
+    }else {
+        $('.modal-wrap[data-id=' + modalId + ']').show();
+    }
 }
 
 //모달 닫기
 function closeModal() { 
-    $(event.target).parent().parent().hide();
+    $(event.target).parent().parent().parent().hide();
 }
 
 $(document).ready(function(){   
