@@ -189,6 +189,7 @@ header h1,
 .menu-header .tit {font-size:1.8rem; text-align:center; line-height:4.6rem;}
 header .btn-util-menu {position:absolute; right:20px; top:50%; transform:translateY(-50%);}
 header .btn-back {position:absolute; left:20px; top:50%; transform:translateY(-50%);}
+header .btn-close {position:absolute; right:20px; top:50%; transform:translateY(-50%);}
 .menu-header .btn-close {position:absolute; right:20px; top:50%; transform:translateY(-50%);}
 
 #menu {position:fixed; right:-100%; top:0; width:100%; height:100%; background:#0D0D0D; z-index:99; transition:all .3s; overflow-y:scroll;}
@@ -346,6 +347,12 @@ footer .sns-list ul li a.pod {background-position:-108px -36px;}
 .subscribe.buy .box .subs {padding-top:0;}
 .subscribe.buy .box .info {margin:17px 0 20px; color:#B6B6B6;}
 .subscribe .dot-list {font-size:1.2rem; line-height:1.6rem; color:#B6B6B6;}
+.subscribe.buying .box {text-align:left; border:none; margin:0 0 20px; padding:20px;}
+.subscribe.buying .box .title {font-size:1.6rem; font-weight:500; margin-bottom:8px;}
+.subscribe.buying .box dl {font-size:0; line-height:1.4rem;}
+.subscribe.buying .box dt {display:inline-block; width:80px; font-size:1.4rem; color:#868686; padding-right:20px; vertical-align:top; margin-top:12px;}
+.subscribe.buying .box dd {display:inline-block; width:calc(100% - 80px); font-size:1.4rem; vertical-align:top; margin-top:12px;}
+.subscribe.buying .ipt-row.flex .ipt-txt + .ipt-txt {margin-left:10px;}
 
 .info-box {width:calc(100% + 40px); background:#1E1E1E; padding:14px 20px; font-size:0; transform:translateX(-20px); margin-bottom:30px;}
 .info-box > li + li { margin-top:20px;}
@@ -578,6 +585,17 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     .modal-title {font-size:3rem; padding:70px;}
     .modal-cont {padding:0 70px 70px;}
     .modal-cont .subscribe.buy .list-tit {margin-top:60px;}
+    
+    .subscribe.buy.buying {text-align:left;}
+    .subscribe.buy.buying .txt {padding:0 0 40px; font-size:2.4rem;}
+    .subscribe.buy.buying .box {width:100%; padding:30px;}
+    .subscribe.buying .box .title {font-size:2rem; margin-bottom:14px;}
+    .subscribe.buying .box dt {font-size:1.8rem; margin-top:16px; width:120px; line-height:1.8rem;}
+    .subscribe.buying .box dd {font-size:1.8rem; margin-top:16px; width:calc(100% - 120px); line-height:1.8rem;}
+    .subscribe.buying form {border-top:none; padding-top:0; margin-top:40px;}
+    .subscribe.buy.buying .list-tit {margin-top:40px;}
+    
+    * + .chk-list {margin-top:40px;}
 
     .my-info {overflow:hidden;}
     .my-info h2 {float:left; width:300px; font-size:2rem; vertical-align:top; padding-top:16px;}
@@ -644,6 +662,7 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     .subscribe.buy .box {display:inline-block; width:390px; padding:36px 20px 20px; margin:0;}
     .subscribe.buy .box + .box {margin-left:40px;}
     .subscribe .box .subs {font-size:2.6rem; position:relative; left:auto; top:auto; transform:none;}
+    .subscribe.buy.buying .txt {color:#fff;}
     .subscribe.buy .box .info {float:initial; font-size:2rem; margin:34px 0 49px;}
     .subscribe.buy .list-tit {margin-top:90px; text-align:left;}
     .subscribe.buy .dot-list {text-align:left;}
