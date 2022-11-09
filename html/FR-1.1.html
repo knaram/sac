@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">    
-    <link rel="stylesheet" href="https://unpkg.com/@egjs/flicking/dist/flicking.css" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://unpkg.com/@egjs/flicking/dist/flicking-inline.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../css/flicking.css">
     <link rel="stylesheet" href="../css/style.css">        
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script src="../js/swiper-bundle.js"></script>
@@ -44,15 +43,16 @@
             <div class="account-util">
                 <p class="txt">로그인하세요.</p>
                 <button type="button" class="btn btn-red">로그인</button>
-                <p>아직 계정이 없습니까? <a class="#">지금 무료 회원가입!</a></p>
+                <p class="mw">아직 계정이 없습니까? <a class="#">지금 무료 회원가입!</a></p>
             </div>
             <!-- //로그인 전 -->
 
             <!-- 로그인 후 -->
             <div class="account-util">
-                <p class="txt">다음 계정으로 로그인이 되었습니다.</p>
+                <p class="txt mw">다음 계정으로 로그인이 되었습니다.</p>
+                <p class="txt pc">로그인 중입니다.</p>
                 <p class="name"><em>홍길동</em>님 (hongkildong)</p>
-                <dl class="subs-box">
+                <dl class="subs-box mw">
                     <dt>나의 시청권</dt>
                     <dd>구독중인 시청권이 없습니다</dd>
                 </dl>
@@ -60,6 +60,7 @@
             <!-- //로그인 전 -->
 
             <div class="links">
+                <a href="#" class="pc">나의 시청권</a>
                 <a href="#">회원정보</a>
                 <a href="#">시청권 구매</a>
                 <a href="#">공지사항</a>
@@ -73,6 +74,8 @@
     <!-- //메뉴 -->
 
     <div id="container" class="main">    <!-- 메인일 경우에만 main클래스 추가 -->
+        
+        <!-- 메인 상단 -->
         <div class="inner">
             <div id="flick" class="flicking-viewport main-slider">
                 <div id="flicking-camera" class="flicking-camera">
@@ -87,32 +90,15 @@
                     </div>
                     <div class="flicking-panel">
                         <img src="../images/@temp_01.png" alt="">
+                        <div class="slide-info">
+                            <span class="flag">클래식</span>
+                            <p class="tit">제목</p>
+                            <p class="txt">설명</p>
+                            <button type="button" class="btn btn-red btn-small">상세 보기</button>
+                        </div>
                     </div>
                     <div class="flicking-panel">
                         <img src="../images/@temp_01.png" alt="">
-                    </div>
-                </div>
-            </div>            
-        </div>
-        <!-- 메인 상단 --
-        <div class="slider-wrap">
-            <div class="main-slider-thumb swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="../images/@temp_01.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../images/@temp_01.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../images/@temp_01.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="main-slider swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
                         <div class="slide-info">
                             <span class="flag">클래식</span>
                             <p class="tit">국립심포니 : DRs Pick II - 수수께끼</p>
@@ -120,25 +106,8 @@
                             <button type="button" class="btn btn-red btn-small">상세 보기</button>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="slide-info">
-                            <span class="flag">장르</span>
-                            <p class="tit">제목</p>
-                            <p class="txt">설명</p>
-                            <button type="button" class="btn btn-red btn-small">상세 보기</button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-info">
-                            <span class="flag">장르</span>
-                            <p class="tit">제목</p>
-                            <p class="txt">설명</p>
-                            <button type="button" class="btn btn-red btn-small">상세 보기</button>
-                        </div>
-                    </div>
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
+            </div>            
         </div>
         <!-- //메인 상단 -->
 
@@ -525,27 +494,8 @@
             });
         })
     </script>
-
-
-
-
-<script>
-    
-</script>
 </body>
 
 </html>
-<style>
-    .flicking-panel {
-        align-items: flex-end;
-        box-sizing: border-box;
-        display: flex;
-        height: 100%;
-        justify-content: center;
-        position: relative;
-        width: 100%;
-        background-color: black;
-    }
-</style>
 </body>
 </html>
