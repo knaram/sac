@@ -472,8 +472,8 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     header .btn-util-menu {right:0;}
     header .btn-back {display:none;}
 
-    #menu {width:180px; height:auto; background:#252525; top:80px; transition:none;}
-    #menu.open {right:60px !important;}
+    #menu {width:180px; height:auto; background:#252525; top:80px; transition:none; overflow:hidden;}
+    #menu.open {position:absolute; right:60px !important;}
     #menu .menu-header {display:none;}
     #menu .account-util {padding:0 24px 16px; border-color:#3D3D3D; margin-bottom:16px;}
     #menu .account-util .txt {font-size:1.3rem; line-height:100%}
