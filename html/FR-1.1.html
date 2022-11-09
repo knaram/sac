@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/flicking.css">
     <link rel="stylesheet" href="../css/style.css">        
     <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/flicking.pkgd.min.js"></script>    
     <script src="../js/swiper-bundle.js"></script>
     <script src="../js/ui-common.js"></script>    
     <title>예술의 전당</title>    
@@ -77,7 +78,7 @@
         
         <!-- 메인 상단 -->
         <div class="inner">
-            <div id="flick" class="flicking-viewport main-slider">
+            <div id="main-slider" class="flicking-viewport main-slider">
                 <div id="flicking-camera" class="flicking-camera">
                     <div class="flicking-panel">
                         <img src="../images/@temp_01.png" alt="">
@@ -107,13 +108,18 @@
                         </div>
                     </div>
                 </div>
-            </div>            
+                <div class="flicking-pagination"></div> <!--pagination-->
+            </div>       
         </div>
         <!-- //메인 상단 -->
 
         <div id="contents">
 
-            <a href="#" class="bann-promo" style="background-color:#0063B1;"><img src="../images/@temp_02.png" alt="프로모션 배너"></a> <!-- 배너 -->
+            <!-- 배너 -->
+            <div class="bann-area">
+                <a href="#" class="bann-promo" style="background-image:url('../images/@temp_02.png');">프로모션 배너</a> 
+            </div>
+            <!-- //배너 -->
 
             <!-- 메인 리스트 -->
             <section class="main-list">
@@ -304,9 +310,13 @@
             </section>
             <!-- //메인 리스트 -->
 
-            <!-- 메인 리스트 -->
-            <a href="#" class="bann-promo" style="background-color:#0063B1;"><img src="../images/@temp_02.png" alt="프로모션 배너"></a>
+            <!-- 배너 -->
+            <div class="bann-area">
+                <a href="#" class="bann-promo" style="background-image:url('../images/@temp_02.png');">프로모션 배너</a> 
+            </div>
+            <!-- //배너 -->
 
+            <!-- 메인 리스트 -->           
             <section class="main-list">
                 <h2>인기 공연 <a href="#" class="btn-txt">모두 보기 &#xE001;</a></h2>
                 
@@ -432,8 +442,12 @@
             </section>
             <!-- //메인 리스트 -->
 
-            <a href="#" class="bann-promo" style="background-color:#0063B1;"><img src="../images/@temp_02.png" alt="프로모션 배너"></a> <!-- 배너 -->
-            <a href="#" class="bann-promo" style="background-color:#0063B1;"><img src="../images/@temp_02.png" alt="프로모션 배너"></a> <!-- 배너 -->
+            <!-- 배너 -->
+            <div class="bann-area">
+                <a href="#" class="bann-promo" style="background-image:url('../images/@temp_02.png');">프로모션 배너</a> 
+                <a href="#" class="bann-promo" style="background-image:url('../images/@temp_02.png');">프로모션 배너</a> 
+            </div>
+            <!-- //배너 -->
         </div>
     </div>
 
@@ -471,16 +485,19 @@
     </footer>
 
 
-    <script src="https://unpkg.com/@egjs/flicking/dist/flicking.pkgd.min.js" crossorigin="anonymous"></script>
+    <script src="../js/flicking-plugins.js"></script>
     <script>
-        $(document).ready(function(){
+        // 메인 상단 슬라이드
+        const flicking = new Flicking(".main-slider", {
+            renderOnlyVisible: true
+        });
+        // flicking.addPlugins(new Pagination({
+        //     type: "scroll"
+        // }));
 
-            const flicking = new Flicking("#flick", {
-                renderOnlyVisible: true
-            });
-            
-            // 메인 리스트 스와이퍼
-            var listSwipers = [];
+        
+        // 메인 리스트 스와이퍼
+        var listSwipers = [];
             $('.main-list-swiper').each(function(i) {
                 var thisID = $(this).attr('id');
 
@@ -492,10 +509,6 @@
                     },
                 });
             });
-        })
     </script>
-</body>
-
-</html>
 </body>
 </html>
