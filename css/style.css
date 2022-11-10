@@ -165,7 +165,7 @@ input[type='checkbox']:checked.toggle + label .toggle:before {left:17px;}
 .inner-menu li a {display:inline-block; font-size:2rem; font-weight:500; vertical-align:middle;}
 .inner-menu a.selected,
 .inner-menu.type2 a.selected {color:#E00A31;}
-.inner-menu.type2 {display:block; text-align:center; width:calc(100% + 40px); transform:translateX(-20px); margin-bottom:20px; padding:10px 20px; white-space:nowrap; overflow-y:scroll; border-bottom:0;}
+.inner-menu.type2 {display:block; text-align:center; width:calc(100% + 40px); transform:translate(-20px,-20px); padding:10px 20px; white-space:nowrap; overflow-y:scroll; border-bottom:0;}
 .inner-menu.type2 li + li {margin-left:30px;}
 .inner-menu.type2 a {font-size:1.4rem; color:#B6B6B6;}
 
@@ -648,7 +648,7 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
 
     .inner-menu {display:block;}
     .inner-menu.gray-bg {padding:30px 0;}
-    .inner-menu.type2 {padding:30px 50px; width:100%; transform:none; line-height:1.6rem; margin-bottom:40px;} 
+    .inner-menu.type2 {padding:30px 50px; width:100%; transform:none; line-height:1.6rem; margin-bottom:40px; overflow-y:hidden;} 
     .inner-menu.type2 li + li {margin-left:40px;}
     .inner-menu.type2 a {font-size:1.6rem;}
 
