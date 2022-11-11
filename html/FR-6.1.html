@@ -73,10 +73,12 @@
 
     <div id="container">
         <div id="contents">
-            <div class="ipt-row ipt-search">                
-                <input type="text" class="ipt-txt" placeholder="제목, 장르, 장소... 검색">
-                <button type="button" class="btn-search">검색</button>
-                <button type="button" class="btn-del">지우기</button>
+            <div class="search-box">
+                <div class="ipt-row ipt-search">                
+                    <input type="text" class="ipt-txt" placeholder="제목, 장르, 장소... 검색">
+                    <button type="button" class="btn-search">검색</button>
+                    <button type="button" class="btn-del">지우기</button>
+                </div>
             </div>
 
             <p class="no-result">감상을 원하시는 공연 제목, 장르 또는<br>장소 등을 검색해보세요.</p>
@@ -182,5 +184,30 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    function searchBoxUi() {
+        var winW = $(window).width(),
+            st = $(window).scrollTop();
+        if(winW < 960){
+            if(st > 0){
+                $('.search-box').addClass('fixed');
+            }else if(st == 0){
+                $('.search-box').removeClass('fixed');
+            }
+        }else {
+            $('.search-box').removeClass('fixed');
+        }
+    }
+    
+    searchBoxUi();
+
+    $(window).scroll(function(){
+        searchBoxUi();
+    }).resize(function(){
+        searchBoxUi();
+    })
+
+    </script>
 </body>
 </html>

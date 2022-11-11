@@ -546,14 +546,16 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     .list.card li:nth-child(2n) {margin-left:0;}
     .list.card li:nth-child(4n) {margin:0 0 60px 0;}
     .list .tit {font-size:2rem; line-height:2.5rem; height:50px;}
-    .list .date {font-size:1.6rem; margin-top:8px;}
+    .list .date {font-size:1.6rem; margin-top:8px; line-height:1.6rem;}
 
     .list.horizontal li {display:inline-block; width:calc((100% - 40px) / 2);}
     .list.horizontal li:nth-child(2n) {margin-left:40px;}
     .list.horizontal li a {overflow:visible;}
     .list.horizontal img {width:288px;}
-    .list.horizontal .info {width:calc(100% - 288px); padding-left:20px; top:15px; transform:translateY(0);}
+    .list.horizontal .info {width:calc(100% - 288px); padding-left:20px; top:15px; transform:translateY(0);}    
     .list.horizontal .tit {max-height:50px;}
+
+    .list.one-card .tit {height:25px;}
 
     .no-conts {width:500px; margin:0 auto; font-size:2rem; padding:35px 0; line-height:2rem;}
 
@@ -758,6 +760,11 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
 
     section.terms h3 {font-size:2.4rem; margin-bottom:30px;}
     section.terms .txt {font-size:1.6rem; line-height:2.2rem;}
+    
+    .main-list-wrap.live {width:100%; transform:none; padding:0;}
+    .main-list-wrap.live .swiper-button-next, 
+    .main-list-wrap.live .swiper-button-prev {display:none;}
+    .live-swiper .list.one-card li + li {margin-top:0;}
 }
 
 
@@ -784,5 +791,10 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     .subscribe .list li .info {display:inline-block; width:calc(100% - 150px);}
     .subscribe .list li .info dl dd:nth-child(2) {width:170px;}
     .subscribe .list li .info dl dd:nth-child(4) {width:260px;}
-    .subscribe .list li .info dl dd:nth-child(6) {width:256px;}    
+    .subscribe .list li .info dl dd:nth-child(6) {width:256px;}   
+    
+    .main-list-wrap.live {width:100%; transform:none; padding:0 80px;}
+    .main-list-wrap.live {width:1380px; transform:translateX(-80px);}
+    .main-list-wrap.live .swiper-button-next, 
+    .main-list-wrap.live .swiper-button-prev {display:block;}
 }

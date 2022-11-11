@@ -79,7 +79,7 @@
 
                 <p class="no-conts">현재 진행중인 라이브가 없습니다.</p>
 
-                <div class="main-list-wrap">
+                <div class="main-list-wrap live">
                     <div class="swiper live-swiper">
                         <ul class="list one-card swiper-wrapper">
                             <li class="swiper-slide">
@@ -268,22 +268,37 @@
         </div>
     </footer>
     <script>
-        var liveSwipers = new Swiper('.live-swiper', {
-            slidesPerView: 3,
-            spaceBetween: 40,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
+        var liveSwipers;
+        function enableSwiper() {
+            liveSwipers = new Swiper('.live-swiper', {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                }
+            });
+        }
 
-        $(document).ready(function(){
-            var ww = $(window).width();
-            if (ww < 1280) {
-            } else if (ww >= 1280) {
-            // swiper 호출 안함
+        var breakpoint = window.matchMedia('(max-width:961px)');
+        var breakpointChecker = function() {
+            if (breakpoint.matches === true) {
+                if (liveSwipers !== undefined) {                    
+                    liveSwipers.destroy( true, true );
+                    $('.live-swiper .list').removeClass('swiper-wrapper').attr('id','');
+                    return;
+                }else if(liveSwipers === undefined){
+                    $('.live-swiper .list').removeClass('swiper-wrapper').attr('id','');
+                    return;
+                }
+            } else if (breakpoint.matches === false) {
+                $('.live-swiper .list').addClass('swiper-wrapper');
+                return enableSwiper();
             }
-        })
+        }
+
+        breakpoint.addListener(breakpointChecker);
+        breakpointChecker();
     </script>
 </body>
 </html>
