@@ -117,7 +117,7 @@ input[type='checkbox']:checked.toggle + label .toggle:before {left:17px;}
 .list.card li {display:inline-block; width:calc((100% - 20px) / 2); margin-bottom:40px; vertical-align:top;}
 .list.card li:nth-child(2n) {margin-left:20px;}
 .list.one-card li + li {margin-top:30px;}
-.list.one-card .tit {height:20px; -webkit-line-clamp:1;}
+.list.one-card .tit {height:20px; -webkit-line-clamp:1; line-height:2rem;}
 .list.horizontal li + li {margin-top:14px;}
 .list.horizontal li a {overflow:hidden; position:relative;}
 .list.horizontal img {float:left; width:144px;}
