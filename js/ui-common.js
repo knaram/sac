@@ -3,9 +3,11 @@ function menuToggle() {
     if($('#menu').hasClass('open')){
         $('#menu').removeClass('open');
         $('html').removeClass('lock');
+        $('.btn-util-menu').removeClass('close');
     }else {
         $('#menu').addClass('open');
         $('html').addClass('lock');
+        $('.btn-util-menu').addClass('close');
     }
 }
 
