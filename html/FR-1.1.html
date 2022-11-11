@@ -92,10 +92,23 @@
         
         <!-- 메인 상단 -->
         <div class="inner">
-            <div id="main-slider" class="flicking-viewport main-slider">
+            <div id="main-img-slider" class="flicking-viewport main-img-slider">
                 <div id="flicking-camera" class="flicking-camera">
                     <div class="flicking-panel">
                         <img src="../images/@temp_01.png" alt="">
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="../images/@temp_01.png" alt="">
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="../images/@temp_01.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="main-info-slider" class="flicking-viewport main-info-slider">
+                <div id="flicking-camera" class="flicking-camera">
+                    <div class="flicking-panel">
                         <div class="slide-info">
                             <span class="flag">클래식</span>
                             <p class="tit">국립심포니 : DRs Pick II - 수수께끼</p>
@@ -104,7 +117,6 @@
                         </div>
                     </div>
                     <div class="flicking-panel">
-                        <img src="../images/@temp_01.png" alt="">
                         <div class="slide-info">
                             <span class="flag">클래식</span>
                             <p class="tit">박수원 하프 독주회</p>
@@ -113,7 +125,6 @@
                         </div>
                     </div>
                     <div class="flicking-panel">
-                        <img src="../images/@temp_01.png" alt="">
                         <div class="slide-info">
                             <span class="flag">클래식</span>
                             <p class="tit">국립심포니 : DRs Pick II - 수수께끼</p>
@@ -123,7 +134,7 @@
                     </div>
                 </div>
                 <div class="flicking-pagination"></div> <!--pagination-->
-            </div>       
+            </div>
         </div>
         <!-- //메인 상단 -->
 
@@ -509,12 +520,50 @@
     <script src="../js/flicking-plugins.js"></script>    
     <script>
         // 메인 상단 슬라이드
-        const flicking = new Flicking(".main-slider", {
-            renderOnlyVisible: true
+        const mainImgSlider = new Flicking("#main-img-slider", {
+            renderOnlyVisible: true,
+            moveType: "strict"
         });
-        flicking.addPlugins(new Flicking.Plugins.Pagination(".flicking-pagination", {
+        const mainInfoSlider = new Flicking("#main-info-slider", {
+            renderOnlyVisible: true,
+            moveType: "strict",
+            duration: 100,
+        });
+
+        mainInfoSlider.addPlugins(new Flicking.Plugins.Pagination(".flicking-pagination", {
             type: "bullet"
         }));  
+
+        mainInfoSlider.addPlugins(new Flicking.Plugins.Sync({
+            type: "camera",
+            synchronizedFlickingOptions: [
+                {
+                    flicking: mainImgSlider,
+                    isClickable: false
+                },
+                {
+                    flicking: mainInfoSlider,
+                    isClickable: false
+                },
+            ]
+        }));
+        
+        
+        // 슬라이드 모션
+        mainImgSlider.on('move', function(){
+            $("#main-info-slider .flicking-camera").addClass('move');
+        });
+        mainImgSlider.on('moveEnd', function(){
+            $("#main-info-slider .flicking-camera").removeClass('move');
+        });
+        
+        mainInfoSlider.on('move', function(){
+            $("#main-info-slider .flicking-camera").addClass('move');
+        });
+        mainInfoSlider.on('moveEnd', function(){
+            $("#main-info-slider .flicking-camera").removeClass('move');
+        });
+       
 
         
         // 메인 리스트 스와이퍼
