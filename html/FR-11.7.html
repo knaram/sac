@@ -18,15 +18,30 @@
 
             <!-- GNB -->
             <div id="nav" class="pc">
-                <a class="home selected" href="#">홈</a>    <!-- 선택된 메뉴에 selected 클래스 추가 -->
-                <a class="genre" href="#">장르</a>
+                <a class="home" href="#">홈</a>    <!-- 선택된 메뉴에 selected 클래스 추가 -->
+                <span>
+                    <a class="genre" href="#">장르</a>
+                    <span class="sub-menu-wrap">
+                        <span class="sub-menu">
+                            <a href="#" class="selected">뮤지컬</a>
+                            <a href="#">오페라</a>
+                            <a href="#">클래식</a>
+                            <a href="#">무용</a>
+                            <a href="#">발레</a>
+                            <a href="#">연극</a>
+                            <a href="#">가족연극</a>
+                            <a href="#">교육</a>
+                            <a href="#">기타</a>
+                        </span>
+                    </span>
+                </span>
                 <a class="live" href="#">LIVE</a>
                 <a class="search" href="#">검색</a>
             </div>
             <!-- //GNB -->
 
             <button type="button" class="btn-back">이전</button>
-            <h1>회원정보 변경</h1>
+            <h1>회원탈퇴</h1>
             <button type="button" class="btn-util-menu pc" onclick="menuToggle()">메뉴</button>
 
             <!-- 메뉴 -->
@@ -74,72 +89,23 @@
 
     <div id="container">
         <div id="contents" class="w620">
-            <p class="page-title">회원정보 변경</p>
+            <p class="page-title">회원탈퇴</p>
             <section>
+                <p>
+                    사용자의 계정을 삭제하시게 되면 구매하신 시청권이 모두 취소됩니다. 
+                    구매하신 시청권의 유효기간이 남아있는 경우에도 취소가 적용되며 계정을 삭제하실 경우 남은 기간의 시청권에 대한 환불은 진행되지 않습니다. 
+                    계정이 완전하게 삭제되기까지 최대 48시간이 소요될 수 있습니다.
+                </p>
+
                 <form>
-                    <div class="ipt-row">
-                        <label for="name">성명 *</label>
-                        <input type="text" class="ipt-txt" name="name" id="name" value="홍길동" readonly>
+                    <div class="ipt-row mt-20">
+                        <label for="name">비밀번호 입력</label>
+                        <input type="password" class="ipt-txt" name="password" id="password">
+                        <p class="error">비밀번호가 틀렸습니다.</p>
                     </div>
-
-                    <div class="ipt-row">
-                        <label for="birthDate">생년월일 *</label>
-                        <div class="ipt-row flex">
-                            <div class="ipt-row">                        
-                                <input type="text" class="ipt-txt" name="birthDate" id="birthDate" value="19991111" readonly>
-                            </div>
-                            <div class="ipt-row">
-                                <input type="radio" name="dateType" id="dateTypeA" checked disabled><label for="dateTypeA">양력</label>
-                                <input type="radio" name="dateType" id="dateTypeB" disabled><label for="dateTypeB">음력</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="ipt-row">
-                        <p class="label">성별 *</p>
-                        <input type="radio" name="gender" id="genderM" checked disabled><label for="genderM">남자</label>
-                        <input type="radio" name="gender" id="genderF" disabled><label for="genderF">여자</label>
-                    </div>
-                    
-                    <div class="ipt-row ipt-group">
-                        <div class="ipt-row with-btn">
-                            <label for="address">주소 *</label>
-                            <input type="text" class="ipt-txt" name="address" id="address" readonly>
-                            <button type="button" class="btn btn-xsmall">주소 검색</button>
-                        </div>
-                        <div class="ipt-row">
-                            <input type="text" class="ipt-txt" name="address" id="address2" readonly>
-                        </div>
-                        <div class="ipt-row">
-                            <input type="text" class="ipt-txt" name="address" id="address3">
-                        </div>
-                    </div>
-
-                    <div class="ipt-row">
-                        <label for="contact">연락처(휴대폰 번호) *</label>
-                        <div class="ipt-row flex">
-                            <div class="ipt-row">
-                                <input type="text" class="ipt-txt" name="contact" id="contact">
-                            </div>
-                            <div class="ipt-row">
-                                <input type="text" class="ipt-txt" name="contact" id="contact2">
-                            </div>
-                            <div class="ipt-row">
-                                <input type="text" class="ipt-txt" name="contact" id="contact3">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="ipt-row">
-                        <label for="email">이메일 *</label>
-                        <div class="ipt-row">
-                            <input type="text" class="ipt-txt" name="email" id="email">
-                        </div>
-                    </div>
-
                     <div class="btn-box">
-                        <button type="button" class="btn btn-xsmall">취소</button>
-                        <button type="button" class="btn btn-red">저장하기</button>
+                        <button type="button" class="btn btn-xsmall pc">취소</button>
+                        <button type="button" class="btn btn-red">회원탈퇴</button>
                     </div>
                 </form>
             </section>

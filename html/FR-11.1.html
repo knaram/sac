@@ -18,117 +18,95 @@
 
             <!-- GNB -->
             <div id="nav" class="pc">
-                <a class="home selected" href="#">홈</a>    <!-- 선택된 메뉴에 selected 클래스 추가 -->
-                <a class="genre" href="#">장르</a>
+                <a class="home" href="#">홈</a>    <!-- 선택된 메뉴에 selected 클래스 추가 -->
+                <span>
+                    <a class="genre" href="#">장르</a>
+                    <span class="sub-menu-wrap">
+                        <span class="sub-menu">
+                            <a href="#" class="selected">뮤지컬</a>
+                            <a href="#">오페라</a>
+                            <a href="#">클래식</a>
+                            <a href="#">무용</a>
+                            <a href="#">발레</a>
+                            <a href="#">연극</a>
+                            <a href="#">가족연극</a>
+                            <a href="#">교육</a>
+                            <a href="#">기타</a>
+                        </span>
+                    </span>
+                </span>
                 <a class="live" href="#">LIVE</a>
                 <a class="search" href="#">검색</a>
             </div>
             <!-- //GNB -->
 
             <button type="button" class="btn-back">이전</button>
-            <h1>회원정보</h1>
+            <h1>설정</h1>
             <button type="button" class="btn-util-menu pc" onclick="menuToggle()">메뉴</button>
-
-            <!-- 메뉴 -->
-            <div id="menu">
-                <div class="menu-header">
-                    <p class="tit">메뉴</p>
-                    <button type="button" class="btn-close" onclick="menuToggle()">닫기</button>
-                </div>
-                <div class="contents">
-                    <!-- 로그인 전 -->
-                    <div class="account-util">
-                        <p class="txt">로그인하세요.</p>
-                        <button type="button" class="btn btn-red">로그인</button>
-                        <p class="mw">아직 계정이 없습니까? <a class="#">지금 무료 회원가입!</a></p>
-                    </div>
-                    <!-- //로그인 전 -->
-
-                    <!-- 로그인 후 -->
-                    <div class="account-util">
-                        <p class="txt mw">다음 계정으로 로그인이 되었습니다.</p>
-                        <p class="txt pc">로그인 중입니다.</p>
-                        <p class="name"><em>홍길동</em>님 (hongkildong)</p>
-                        <dl class="subs-box mw">
-                            <dt>나의 시청권</dt>
-                            <dd>구독중인 시청권이 없습니다</dd>
-                        </dl>
-                    </div>
-                    <!-- //로그인 전 -->
-
-                    <div class="links">
-                        <a href="#" class="pc">나의 시청권</a>
-                        <a href="#">회원정보</a>
-                        <a href="#">시청권 구매</a>
-                        <a href="#">공지사항</a>
-                        <a href="#">이용안내</a>
-                        <a href="#">고객센터</a>
-                        <a href="#">설정</a>
-                        <a href="#" class="no-icon">로그아웃</a>
-                    </div>
-                </div>
-            </div>
-            <!-- //메뉴 -->
         </div>
     </header>
 
-    <div id="container" class="pb-0">
-        <div id="contents">
-            <p class="page-title">회원정보</p>
-            <section class="my-info">
-                <h2>회원정보<a href="#" class="btn-txt">회원정보 변경</a></h2>
-                <ul class="info-box">                    
-                    <li>
-                        <span class="tit">아이디</span>
-                        <span class="txt">Hongkildong</span>
-                    </li>
-                    <li>
-                        <span class="tit">이름</span>
-                        <span class="txt">홍길동</span>
-                    </li>
-                    <li class="half">
-                        <span class="tit">생년월일</span>
-                        <span class="txt">1900년 10월 10월(양력)</span>
-                    </li>
-                    <li class="half">
-                        <span class="tit">성별</span>
-                        <span class="txt">남자</span>
-                    </li>
-                    <li>
-                        <span class="tit">연락처(휴대폰 번호)</span>
-                        <span class="txt">010-1234-5678</span>
-                    </li>
-                    <li>
-                        <span class="tit">이메일</span>
-                        <span class="txt">hongkildong@gmail.com</span>
-                    </li>
-                    <li>
-                        <span class="tit">주소</span>
-                        <span class="txt">(우) 06757 서울시 서초구 남부순환로 2406 (서초동 700)</span>
-                    </li>
-                </ul>
+    <!-- 메뉴 -->
+    <div id="menu">
+        <div class="menu-header">
+            <p class="tit">메뉴</p>
+            <button type="button" class="btn-close" onclick="menuToggle()">닫기</button>
+        </div>
+        <div class="contents">
+            <!-- 로그인 전 -->
+            <div class="account-util">
+                <p class="txt">로그인하세요.</p>
+                <button type="button" class="btn btn-red">로그인</button>
+                <p class="mw">아직 계정이 없습니까? <a class="#">지금 무료 회원가입!</a></p>
+            </div>
+            <!-- //로그인 전 -->
 
-                <h2>관심장르<a href="#" class="btn-txt">관심장르 변경</a></h2>
-                <p class="info-box">뮤지컬, 무용</p>
+            <!-- 로그인 후 -->
+            <div class="account-util">
+                <p class="txt mw">다음 계정으로 로그인이 되었습니다.</p>
+                <p class="txt pc">로그인 중입니다.</p>
+                <p class="name"><em>홍길동</em>님 (hongkildong)</p>
+                <dl class="subs-box mw">
+                    <dt>나의 시청권</dt>
+                    <dd>구독중인 시청권이 없습니다</dd>
+                </dl>
+            </div>
+            <!-- //로그인 전 -->
 
-                <h2>비밀번호<a href="#" class="btn-txt">비밀번호 변경</a></h2>
-                <p class="info-box">********</p></p>
+            <div class="links">
+                <a href="#" class="pc">나의 시청권</a>
+                <a href="#">회원정보</a>
+                <a href="#">시청권 구매</a>
+                <a href="#">공지사항</a>
+                <a href="#">이용안내</a>
+                <a href="#">고객센터</a>
+                <a href="#">설정</a>
+                <a href="#" class="no-icon">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- //메뉴 -->
 
-                <h2>마케팅 정보 수신 동의</h2>
-                <div class="info-box">
-                    <p class="sub-txt">수신동의를 하시면 Digital 예술의전당에서 제공하는 다양한 프로모션과 이벤트/신규 콘텐츠 등의 정보를 만나실 수 있습니다.</p>
-                    <ul class="chk-list">
-                        <li class="checkAll">
-                            <input type="checkbox" class="type2" name="marketing" id="marketingAll"><label for="marketingAll" onclick="checkAll();"><span class="blind">[선택] 마케팅 활용 및 수신 동의</span></label>
-                            <a href="#">[선택] 마케팅 활용 및 수신 동의 <span class="btn-txt">&#xE001;</span></a>
-                        </li>
-                        <li class="pl-20"><input type="checkbox" class="type2" name="marketing" id="marketingA"><label for="marketingA">이메일 수신 동의</label></li>
-                        <li class="pl-20"><input type="checkbox" class="type2" name="marketing" id="marketingB"><label for="marketingB">SMS 수신 동의</label></li>
-                    </ul>
+    <div id="container">
+        <div id="contents" class="no-pd">
+            <section class="setting-box">
+                <p class="tit">알림 설정</p>
+                <div class="ipt-row">
+                    <input type="checkbox" class="toggle" name="push" id="push"><label for="push">서비스 알림 받기<i class="toggle"></i></label>
                 </div>
 
-                <h2>회원탈퇴</h2>
-                <p class="info-box"><a href="#" class="txt-red">탈퇴하기</a></p>
+                <p class="tit">데이터 설정</p>
+                <div class="ipt-row">
+                    <input type="checkbox" class="toggle" name="play-wifi" id="play-wifi"><label for="play-wifi">Wi-Fi에서만 시청 설정<i class="toggle"></i></label>
+                </div>
+
+                <p class="tit">앱/단말 정보</p>
+                <dl>
+                    <dt>앱 버전</dt>
+                    <dd>최신 버전을 사용중입니다. (1.1.0)</dd>
+                    <dt>OS 버전</dt>
+                    <dd>16.0</dd>
+                </dl>
             </section>
         </div> 
     </div>

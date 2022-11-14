@@ -18,8 +18,23 @@
 
             <!-- GNB -->
             <div id="nav">
-                <a class="home selected" href="#">홈</a>    <!-- 선택된 메뉴에 selected 클래스 추가 -->
-                <a class="genre" href="#">장르</a>
+                <a class="home" href="#">홈</a>    <!-- 선택된 메뉴에 selected 클래스 추가 -->
+                <span>
+                    <a class="genre" href="#">장르</a>
+                    <span class="sub-menu-wrap">
+                        <span class="sub-menu">
+                            <a href="#" class="selected">뮤지컬</a>
+                            <a href="#">오페라</a>
+                            <a href="#">클래식</a>
+                            <a href="#">무용</a>
+                            <a href="#">발레</a>
+                            <a href="#">연극</a>
+                            <a href="#">가족연극</a>
+                            <a href="#">교육</a>
+                            <a href="#">기타</a>
+                        </span>
+                    </span>
+                </span>
                 <a class="live" href="#">LIVE</a>
                 <a class="search" href="#">검색</a>
             </div>
@@ -78,6 +93,7 @@
 
             <div class="login-box">
                 <form>           
+                    <h3>아이디/비밀번호</h3>
                     <div class="ipt-group">
                         <div class="ipt-row">                
                             <input type="text" class="ipt-txt" placeholder="아이디">
