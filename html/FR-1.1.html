@@ -572,12 +572,12 @@
         // 메인 상당 슬라이드 Fade 효과
         mainInfoSlider.on('moveStart', function(){
             $('.main-info-slider .flicking-camera').fadeOut(0);
-        }).on('holdEnd', function(){
+        }).on('moveEnd', function(){
             $('.main-info-slider .flicking-camera').fadeIn(200);
         })
         mainImgSlider.on('moveStart', function(){
             $('.main-info-slider .flicking-camera').fadeOut(0);
-        }).on('holdEnd', function(){
+        }).on('moveEnd', function(){
             $('.main-info-slider .flicking-camera').fadeIn(200);
         })
 
