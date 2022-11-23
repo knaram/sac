@@ -171,7 +171,7 @@ input[type='checkbox']:checked.toggle + label .toggle:before {left:17px;}
 .inner-menu.type2 a {font-size:1.4rem; color:#B6B6B6;}
 
 
-.flag {display:inline-block; color:#E00A31; border:1px solid #E00A31; padding:5px 7px; margin-bottom:10px; font-size:1.3rem; line-height:1.3rem;}
+.flag {display:inline-block; color:#E00A31; border:2px solid #E00A31; padding:5px 7px; margin-bottom:10px; font-size:1.3rem; line-height:1.3rem; font-weight:500;}
 .flag + .flag {margin-left:6px;}
 
 h1 {font-size:1.8rem; font-weight:500;}
@@ -229,7 +229,7 @@ footer .links a {display:inline-block; padding:0 13px; border-left:1px solid #ff
 footer .links a:first-child {padding:0 13px 0 0; border-left:0;}
 footer address {margin-top:10px; color:#555; font-size:1.3rem; line-height:1.9rem;}
 footer .sns-list {margin-top:20px;}
-footer .sns-list p {color:#868686; font-size:1.3rem; font-weight:500;}
+footer .sns-list p {color:#868686; font-size:1.3rem;}
 footer .sns-list ul {width:184px; font-size:0;}
 footer .sns-list ul li {display:inline-block; width:36px; height:36px; margin:10px 10px 0 0;}
 footer .sns-list ul li a {display:block; width:100%; height:100%; background:url('../images/icon_sns.png') no-repeat; background-size:auto 72px;}
@@ -246,9 +246,9 @@ footer .sns-list ul li a.pod {background-position:-108px -36px;}
 .main-info-slider {position:absolute !important; z-index:1; bottom:0; left:0; width:100%; height:34.04% !important; background:linear-gradient(179.95deg, rgba(0, 0, 0, 0.4) 9.26%, #000 93.81%); padding:20px 0; box-sizing:border-box;}
 .main-info-slider .flicking-panel {padding:0 20px;}
 .main-info-slider .slide-info {width:100%; padding-right:120px;}
-.main-info-slider .slide-info .tit {font-size:2.4rem; line-height:2.8rem; margin-bottom:6px;}
+.main-info-slider .slide-info .tit {font-size:2.4rem; line-height:2.8rem; margin-bottom:6px; font-weight:500;}
 .main-info-slider .slide-info .txt {display:block; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis; color:#B6B6B6;}
-.main-info-slider .slide-info .btn {position:absolute; width:100px; right:20px; bottom:0; font-size:1.5rem; font-weight:700;}
+.main-info-slider .slide-info .btn {position:absolute; width:100px; right:20px; bottom:0; font-size:1.5rem; font-weight:500;}
 .flicking-pagination {bottom:auto; top:15px;}
 .flicking-pagination-bullet {background:#868686; width:4px; height:4px;}
 .flicking-pagination-bullet-active {background:#E00A31;}
@@ -270,12 +270,12 @@ footer .sns-list ul li a.pod {background-position:-108px -36px;}
 .main-list-swiper .swiper-button-prev {left:0;}
 .main-list-swiper .swiper-button-next {right:0;}
 
-.main-list h2 {padding-right:20px;}
-.btn-txt {font-size:1.4rem; font-weight:400; color:#868686; float:right; vertical-align:middle;}
+.main-list h2 {padding-right:20px; font-weight:500;}
+.btn-txt {font-size:1.4rem; font-weight:300; color:#868686; float:right; vertical-align:middle;}
 .main-list ul li {width:165px; vertical-align:top; transition:all .3s;}
 .main-list ul li + li {margin-left:14px;}
 .main-list ul li a {display:block;}
-.main-list ul li .tit {display:block; font-size:1.6rem; font-weight:500; white-space:break-spaces; padding-top:10px;}
+.main-list ul li .tit {display:block; font-size:1.6rem; font-weight:400; white-space:break-spaces; padding-top:10px;}
 .no-conts {background:#1E1E1E; padding:28px 0; text-align:center; font-weight:500; line-height:1.8rem;}
 .no-result {text-align:center; font-size:1.5rem; line-height:1.8rem; color:#B6B6B6;}
 
@@ -484,7 +484,7 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     header h1 {display:none;}
     #nav.pc {display:inline-block;}
     #nav {position:initial; display:inline-block; width:auto; height:auto; font-size:0; margin-left:116px; vertical-align:middle;}
-    #nav a {width:auto; height:auto; font-size:1.8rem; color:#fff; font-weight:500; margin-right:40px; line-height:1.8rem; vertical-align:middle; cursor:pointer;}
+    #nav a {width:auto; height:auto; font-size:1.8rem; color:#fff; font-weight:400; margin-right:40px; line-height:1.8rem; vertical-align:middle; cursor:pointer;}
     #nav a:before {content:none;}
     #nav a.search {position:absolute; right:64px; top:50%; transform:translateY(-50%); font-size:0; width:24px; height:24px; margin-right:0; background:url('../images/icons.png') -105px -43px no-repeat; background-size:auto 80px;}
     header .btn-util-menu {right:0;}
@@ -520,7 +520,7 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
 
     .flag {font-size:1.6rem; line-height:1.6rem;}    
 
-    .bann-area {max-width:1280px; margin:0 20px;}
+    .bann-area {max-width:1280px; margin:0 auto;}
     .bann-area.type2 .bann-promo + .bann-promo {margin-left:40px;}
     .main .bann-promo {width:100%; height:140px; text-align:center; background-size:100% auto;}
     .bann-promo {margin:0;}    
@@ -531,16 +531,16 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     .main-info-slider .slide-info {padding:20px 320px 20px 40px;}
     .main-info-slider .slide-info .tit {font-size:3.4rem; line-height:4.2rem;}
     .main-info-slider .slide-info .txt {height:52px;}
-    .main-info-slider .slide-info .btn {width:230px; right:40px; bottom:40px;}
+    .main-info-slider .slide-info .btn {width:230px; right:40px; bottom:20px; font-size:1.8rem;}
     .flicking-pagination-bullet {width:8px; height:8px;}
     
     .scroll-wrap {margin:0 30px;}
 
-    .main-list h2 {padding:0 60px;}
+    .main-list h2 {padding:0 80px;}
     .main-list {position:relative; margin:80px 0; }
     .main-list ul li {width:200px;}
     .main-list ul li + li {margin-left:20px;}
-    .main-list ul li .tit {font-size:2rem;}
+    .main-list ul li .tit {font-size:2rem; line-height:2.5rem;}
 
     .list-tit {font-size:1.8rem;}
     .subscribe .dot-list {font-size:1.5rem; line-height:2.2rem;}
@@ -773,7 +773,7 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
 
 
 @media only screen and (min-width:1280px) {
-    .inner {padding:0 20px;}
+    /* .inner {padding:0 20px;} */
     header .btn-util-menu {right:20px;}
     #nav a.search {right:84px;}
 
