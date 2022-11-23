@@ -40,7 +40,7 @@ img {width:100%;}
 .btn-box {margin:20px 0 14px;}
 .btn-box.fix-btm {position:fixed; width:100%; left:0; bottom:0; padding:14px 20px; margin:0; background:#0D0D0D;}
 
-.btn-util-menu {font-size:0; width:24px; height:24px; background:url('../images/btn_menu.png') no-repeat; background-size:100% auto;}
+.btn-util-menu {font-size:0; width:25px; height:20px; background:url('../images/btn_menu.png') no-repeat; background-size:100% auto;}
 .btn-util-menu.close {background:url('../images/icons.png') -24px 0px no-repeat; background-size:auto 80px;}
 .btn-back {font-size:0; width:24px; height:24px; background:url('../images/icons.png') 0 0 no-repeat; background-size:auto 80px;}
 .btn-play {font-size:0; width:53px; height:50px; background:url('../images/icons.png') 0 -26px no-repeat; background-size:auto 80px;}
@@ -124,6 +124,10 @@ input[type='checkbox']:checked.toggle + label .toggle:before {left:17px;}
 .list.horizontal .info {float:left; width:calc(100% - 154px); vertical-align:middle; position:absolute; padding-left:10px; top:50%; transform:translateY(-50%);}
 .list.horizontal .tit {height:auto; max-height:40px; margin-top:0;}
 
+@media only screen and (min-width:640px){   
+    .main-list-wrap.live .list.one-card li + li {margin-top:0;}
+}
+
 .list-tit {padding-top:10px; font-size:1.3rem; font-weight:700; margin-top:10px;}
 .list-tit + ul {margin-top:10px;}
 .dot-list li {position:relative; padding-left:16px;}
@@ -171,7 +175,7 @@ input[type='checkbox']:checked.toggle + label .toggle:before {left:17px;}
 .inner-menu.type2 a {font-size:1.4rem; color:#B6B6B6;}
 
 
-.flag {display:inline-block; color:#E00A31; border:2px solid #E00A31; padding:5px 7px; margin-bottom:10px; font-size:1.3rem; line-height:1.3rem; font-weight:500;}
+.flag {display:inline-block; color:#E00A31; border:2px solid #E00A31; padding:4px 6px; margin-bottom:10px; font-size:1.3rem; line-height:1.3rem; font-weight:500; box-sizing:border-box;}
 .flag + .flag {margin-left:6px;}
 
 h1 {font-size:1.8rem; font-weight:500;}
@@ -223,10 +227,11 @@ header .btn-close {position:absolute; right:20px; top:50%; transform:translateY(
 #nav a.selected.search:before {background-position:-78px -24px;}
 #nav .sub-menu {display:none;}
 
-footer {border-top:1px solid rgba(255,255,255,.1); padding:30px;}
+footer {border-top:1px solid #3D3D3D; padding:30px;}
 footer .logo {width:126px; margin-bottom:20px;}
 footer .links a {display:inline-block; padding:0 13px; border-left:1px solid #fff; line-height:1.4rem;}
 footer .links a:first-child {padding:0 13px 0 0; border-left:0;}
+footer .links a em {font-weight:500; text-decoration:underline;}
 footer address {margin-top:10px; color:#555; font-size:1.3rem; line-height:1.9rem;}
 footer .sns-list {margin-top:20px;}
 footer .sns-list p {color:#868686; font-size:1.3rem;}
@@ -241,28 +246,26 @@ footer .sns-list ul li a.ntv {background-position:-36px -36px;}
 footer .sns-list ul li a.npost {background-position:-72px -36px;}
 footer .sns-list ul li a.pod {background-position:-108px -36px;}
 
-.flicking-panel {align-items:flex-end; box-sizing:border-box; display:flex; height:100%; justify-content:center; position:relative; width:100%; overflow:hidden;}
+.main-img-slider {overflow:hidden;}
 .main-img-slider img {height:520px; width:auto;}
-.main-info-slider {position:absolute !important; z-index:1; bottom:0; left:0; width:100%; height:34.04% !important; background:linear-gradient(179.95deg, rgba(0, 0, 0, 0.4) 9.26%, #000 93.81%); padding:20px 0; box-sizing:border-box;}
-.main-info-slider .flicking-panel {padding:0 20px;}
+.main-info-slider {position:absolute !important; z-index:1; bottom:0; left:0; width:100%; height:33.27% !important; background:linear-gradient(179.95deg, rgba(0, 0, 0, 0.4) 9.26%, #000 93.81%); padding:20px 0; box-sizing:border-box; overflow:hidden;}
+.main-info-slider .swiper-slide {padding:0 20px;}
 .main-info-slider .slide-info {width:100%; padding-right:120px;}
-.main-info-slider .slide-info .tit {font-size:2.4rem; line-height:2.8rem; margin-bottom:6px; font-weight:500;}
+.main-info-slider .slide-info .tit {font-size:2.4rem; line-height:2.8rem; margin-bottom:6px; font-weight:500; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis;}
 .main-info-slider .slide-info .txt {display:block; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis; color:#B6B6B6;}
-.main-info-slider .slide-info .btn {position:absolute; width:100px; right:20px; bottom:0; font-size:1.5rem; font-weight:500;}
-.flicking-pagination {bottom:auto; top:15px;}
-.flicking-pagination-bullet {background:#868686; width:4px; height:4px;}
-.flicking-pagination-bullet-active {background:#E00A31;}
+.main-info-slider .slide-info .btn {position:absolute; width:100px; height:46px; line-height:4.6rem; right:20px; bottom:0; font-size:1.5rem; font-weight:500;}
+.main-swiper-pagination.swiper-pagination-bullets {position:absolute; bottom:auto; top:7px; text-align:center;}
+.main-swiper-pagination .swiper-pagination-bullet{background:#868686; width:4px; height:4px;}
+.main-swiper-pagination .swiper-pagination-bullet-active {background:#E00A31;}
 
 .main {padding:20px 0 20px 20px; overflow:hidden;}
 .bann-area {display:block; flex:1;}
 .bann-promo {display:block; width:100%; height:66px; margin:20px 0; text-align:center; background-repeat:no-repeat; background-position:center; background-size:auto 100%; font-size:0;}
-.bann-area.type2 .bann-promo {background-size:100% auto;}
-.bann-area.type2 .bann-promo + .bann-promo {margin-left:0;}
 @media only screen and (min-width:640px){    
     .bann-area {display:flex;}    
     .bann-promo {background-size:100% auto;}
-    .bann-area.type2 .bann-promo + .bann-promo {margin-left:20px;}
 }
+.main-banner-slider {margin:0 auto; overflow:hidden;}
 
 .main-list {margin:50px 0;}
 .main-list:first-child {margin:40px 0 50px;}
@@ -271,11 +274,11 @@ footer .sns-list ul li a.pod {background-position:-108px -36px;}
 .main-list-swiper .swiper-button-next {right:0;}
 
 .main-list h2 {padding-right:20px; font-weight:500;}
-.btn-txt {font-size:1.4rem; font-weight:300; color:#868686; float:right; vertical-align:middle;}
+.btn-txt {font-size:1.4rem; color:#868686; float:right; vertical-align:middle;}
 .main-list ul li {width:165px; vertical-align:top; transition:all .3s;}
 .main-list ul li + li {margin-left:14px;}
 .main-list ul li a {display:block;}
-.main-list ul li .tit {display:block; font-size:1.6rem; font-weight:400; white-space:break-spaces; padding-top:10px;}
+.main-list ul li .tit {display:block; font-size:1.6rem; white-space:break-spaces; padding-top:10px;}
 .no-conts {background:#1E1E1E; padding:28px 0; text-align:center; font-weight:500; line-height:1.8rem;}
 .no-result {text-align:center; font-size:1.5rem; line-height:1.8rem; color:#B6B6B6;}
 
@@ -293,12 +296,13 @@ footer .sns-list ul li a.pod {background-position:-108px -36px;}
 .show .top .tit {font-size:2rem; font-weight:700; line-height:2.4rem; display:-webkit-box; height:48px; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis;}
 .show .top .price {display:inline-block; font-size:1.4rem; margin-top:6px; color:#B6B6B6;}
 .show .info {padding-top:20px; border-top:1px solid #252525; }
+.type {font-size:0;}
 .type span {display:inline-block; width:30px; height:30px; vertical-align:middle; background:url('../images/icon_types.png') no-repeat; background-size:auto 30px; font-size:0;}
 .type span + span {margin-left:4px;}
 .type .all {background-position:0 0;}
-.type .subject {background-position:-30px 0;}
-.type .violence {background-position:-60px 0;}
-.type .horror {background-position:-90px 0;}
+.type .age12 {background-position:-30px 0;}
+.type .age15 {background-position:-60px 0;}
+.type .age18 {background-position:-90px 0;}
 .show .info .type + dl {margin-top:14px;}
 .show .info dl {font-size:0; color:#B6B6B6;}
 .show .info dl dt {display:inline-block; width:70px; font-size:1.4rem; font-weight:700; margin-right:10px; margin-bottom:10px;}
@@ -437,6 +441,7 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     .w960 {max-width:960px; margin:0 auto;}
     .w620 {max-width:620px; margin:0 auto;}
     .inner {max-width:1280px; margin:0 auto;}
+    section + section {margin-top:80px;}
 
     .pc {display:block;}
     .mw {display:none;}
@@ -486,15 +491,15 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     #nav {position:initial; display:inline-block; width:auto; height:auto; font-size:0; margin-left:116px; vertical-align:middle;}
     #nav a {width:auto; height:auto; font-size:1.8rem; color:#fff; font-weight:400; margin-right:40px; line-height:1.8rem; vertical-align:middle; cursor:pointer;}
     #nav a:before {content:none;}
-    #nav a.search {position:absolute; right:64px; top:50%; transform:translateY(-50%); font-size:0; width:24px; height:24px; margin-right:0; background:url('../images/icons.png') -105px -43px no-repeat; background-size:auto 80px;}
+    #nav a.search {position:absolute; right:64px; top:50%; transform:translateY(-50%); font-size:0; width:25px; height:25px; margin-right:0; background:url('../images/icon_search.png') no-repeat; background-size:auto 100%;}
     header .btn-util-menu {right:0;}
     header .btn-back {display:none;}
     #nav > span {position:relative; display:inline-block; cursor:pointer;}
     #nav > span:hover .sub-menu-wrap {display:block;}
     #nav .sub-menu-wrap {display:none; position:absolute; top:0; left:0; width:160px; box-sizing:border-box; padding-top:40px;}
-    #nav .sub-menu {display:block; padding:16px 24px; box-sizing:border-box; background:#252525;}
-    #nav .sub-menu a {display:block; text-align:left; font-size:1.5rem; line-height:2.4rem;}
-    #nav .sub-menu a + a {margin-top:8px;}
+    #nav .sub-menu {display:block; padding:11px 0; box-sizing:border-box; background:#252525;}
+    #nav .sub-menu a {display:block; text-align:left; font-size:1.5rem; line-height:1.5rem; width:100%; padding:9px 24px; box-sizing:border-box;}
+    #nav .sub-menu a:hover {background:#3D3D3D;}
 
     #menu {width:180px; height:auto; background:#252525; top:80px; transition:none; overflow:hidden;}
     #menu.open {position:absolute; right:60px !important;}
@@ -521,18 +526,20 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     .flag {font-size:1.6rem; line-height:1.6rem;}    
 
     .bann-area {max-width:1280px; margin:0 auto;}
-    .bann-area.type2 .bann-promo + .bann-promo {margin-left:40px;}
     .main .bann-promo {width:100%; height:140px; text-align:center; background-size:100% auto;}
     .bann-promo {margin:0;}    
     .bann-promo img {max-width:none; width:auto; height:140px;}
 
-    .main-img-slider .flicking-panel img {height:auto; width:100%;}
+    .main-img-slider img {height:auto; width:100%;}
     .main-info-slider {height:224px !important;}
     .main-info-slider .slide-info {padding:20px 320px 20px 40px;}
-    .main-info-slider .slide-info .tit {font-size:3.4rem; line-height:4.2rem;}
+    .main-info-slider .slide-info .tit {font-size:3.4rem; line-height:4.2rem; margin-bottom:8px; -webkit-line-clamp:1;}
     .main-info-slider .slide-info .txt {height:52px;}
-    .main-info-slider .slide-info .btn {width:230px; right:40px; bottom:20px; font-size:1.8rem;}
-    .flicking-pagination-bullet {width:8px; height:8px;}
+    .main-info-slider .slide-info .btn {width:230px; right:40px; bottom:20px; font-size:1.7rem;}
+    .main-swiper-pagination.swiper-pagination-bullets {top:27px;}
+    .main-swiper-pagination .swiper-pagination-bullet {width:8px; height:8px;}
+
+    .main-banner-slider {max-width:1280px;}
     
     .scroll-wrap {margin:0 30px;}
 
@@ -551,16 +558,19 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     .list .tit {font-size:2rem; line-height:2.5rem; height:50px;}
     .list .date {font-size:1.6rem; margin-top:8px; line-height:1.6rem;}
 
-    .list.horizontal li {display:inline-block; width:calc((100% - 40px) / 2);}
+    .list.horizontal li {display:inline-block; width:calc((100% - 40px) / 2); vertical-align:top;}
+    .list.horizontal li:first-child,
+    .list.horizontal li:nth-child(2) {margin-top:0;}
     .list.horizontal li:nth-child(2n) {margin-left:40px;}
+    .list.horizontal li + li {margin-top:40px;}
     .list.horizontal li a {overflow:visible;}
     .list.horizontal img {width:288px;}
     .list.horizontal .info {width:calc(100% - 288px); padding-left:20px; top:15px; transform:translateY(0);}    
-    .list.horizontal .tit {max-height:50px;}
+    .list.horizontal .tit {max-height:50px;}    
 
     .list.one-card .tit {height:25px; line-height:2.5rem;}
 
-    .no-conts {width:500px; margin:0 auto; font-size:2rem; padding:35px 0; line-height:2rem;}
+    .no-conts {width:500px; margin:70px auto 150px; font-size:2rem; padding:35px 0; line-height:2rem;}
 
     .show {margin-top:-50px;}
     .show .top {position:relative; padding-bottom:8px;}
@@ -570,12 +580,14 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     .show .top .tit {font-size:3.4rem; line-height:4.6rem;}
     .show .top .price {font-size:2.4rem; margin-top:12px;}
     .show .btn-group {position:absolute; bottom:16px; left:230px; width:360px;}
+    .show .btn {height:60px; line-height:6rem; font-size:2rem;}
+    .show .btn.btn-small {width:110px;}
     .show .info {padding-top:30px; margin-left:230px;}
     .type span {width:50px; height:50px; background-size:auto 50px;}
     .type span + span {margin-left:10px;}
-    .type .subject {background-position:-50px 0;}
-    .type .violence {background-position:-100px 0;}
-    .type .horror  {background-position:-150px 0;}
+    .type .age12 {background-position:-50px 0;}
+    .type .age15 {background-position:-100px 0;}
+    .type .age18  {background-position:-150px 0;}
     .show .info .type + dl {margin-top:20px;}
     .show .info dl dt {margin-right:40px; margin-bottom:20px; font-size:1.8rem;}
     .show .info dl dd {width:calc(100% - 110px); margin-bottom:20px; font-size:1.8rem;} 
@@ -777,8 +789,7 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     header .btn-util-menu {right:20px;}
     #nav a.search {right:84px;}
 
-    footer .inner {padding:0 58px;}
-    footer .logo {width:150px; margin:0 180px 0 0;}
+    footer .logo {width:204px; height:30px; margin:0 180px 0 0;}
     footer .info-wrap {width:440px;}
     footer .sns-list {right:58px;}
 

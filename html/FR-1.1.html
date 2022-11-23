@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../css/flicking.css">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script src="../js/swiper-bundle.js"></script>
@@ -97,24 +96,17 @@
 
         <!-- 메인 상단 -->
         <div class="inner">
-            <div id="main-img-slider" class="flicking-viewport main-img-slider">
-                <div id="flicking-camera" class="flicking-camera">
-                    <div class="flicking-panel">
-                        <img src="../images/@temp_01.png" alt="">
-                    </div>
-                    <div class="flicking-panel">
-                        <img src="../images/@temp_01.png" alt="">
-                    </div>
-                    <div class="flicking-panel">
-                        <img src="../images/@temp_01.png" alt="">
-                    </div>
+            <div class="main-img-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../images/@temp_01.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/@temp_01.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/@temp_01.png" alt=""></div>
                 </div>
             </div>
 
-
-            <div id="main-info-slider" class="flicking-viewport main-info-slider">
-                <div id="flicking-camera" class="flicking-camera">
-                    <div class="flicking-panel">
+            <div class="main-info-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
                         <div class="slide-info">
                             <span class="flag">클래식</span>
                             <p class="tit">국립심포니 : DRs Pick II - 수수께끼</p>
@@ -125,7 +117,7 @@
                             <button type="button" class="btn btn-red btn-small">상세 보기</button>
                         </div>
                     </div>
-                    <div class="flicking-panel">
+                    <div class="swiper-slide">
                         <div class="slide-info">
                             <span class="flag">클래식</span>
                             <p class="tit">박수원 하프 독주회</p>
@@ -135,21 +127,20 @@
                             <button type="button" class="btn btn-red btn-small">상세 보기</button>
                         </div>
                     </div>
-                    <div class="flicking-panel">
+                    <div class="swiper-slide">
                         <div class="slide-info">
                             <span class="flag">클래식</span>
-                            <p class="tit">국립심포니 : DRs Pick II - 수수께끼</p>
-                            <p class="txt">라벨의 마법같은 음악과 엘가의 따스함을 연주한다. 익살스러움을 가미한 이번 정기연주회의 프로그램은 8월의 무더위를 날리기에 적절한 음악적
+                            <p class="tit">DRs Pick II - 수수께끼</p>
+                            <p class="txt">익살스러움을 가미한 이번 정기연주회의 프로그램은 8월의 무더위를 날리기에 적절한 음악적
                                 유머러스함까지 갖추었다. 무겁기만한 클래식 음악은 벗어던지고, 작곡가가 무슨 이야기를 할까 기대되는, 그런 재미있는 클래식 음악의 매력을 어필한다. 사실
                                 라벨의 어미 거위 모음곡도, 엘가의 수수께끼 변주곡도 작곡가와 관련된 누군가를 기쁘게 해주기 위해 작곡된 음악이라고 하니, 국립심포니의 연주도 관객들을 기쁘게
                                 만들 수 있지 않을까 기대해 본다.</p>
                             <button type="button" class="btn btn-red btn-small">상세 보기</button>
                         </div>
                     </div>
-                </div>
-                <div class="flicking-pagination"></div>
-                <!--pagination-->
-            </div>
+                </div>                
+                <div class="main-swiper-pagination"></div>
+            </div>            
         </div>
         <!-- //메인 상단 -->
 
@@ -486,11 +477,13 @@
             </section>
             <!-- //메인 리스트 -->
 
+
             <!-- 배너 -->
-            <div class="bann-area type2">
-                <!--배너 2개일 경우 type2 클래스 추가-->
-                <a href="#" class="bann-promo" style="background-image:url('../images/@temp_02_1.png');">프로모션 배너</a>
-                <a href="#" class="bann-promo" style="background-image:url('../images/@temp_02_1.png');">프로모션 배너</a>
+            <div class="main-banner-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../images/@temp_02_1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/@temp_02_1.png" alt=""></div>
+                </div>
             </div>
             <!-- //배너 -->
         </div>
@@ -505,12 +498,12 @@
             <div class="info-wrap">
                 <div class="links">
                     <a href="#">서비스 이용약관</a>
-                    <a href="#">개인정보처리방침</a>
-                    <a href="#">FAQ</a>
+                    <a href="#">자주 묻는 질문</a>
+                    <a href="#"><em>개인정보처리방침</em></a> 
                 </div>
                 <address>
                     (우) 06757 서울시 서초구 남부순환로 2406 예술의전당<br><br class="pc">
-                    대표자 장형준 사업자등록번호 214-82-00264<br>
+                    대표자 장형준&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호 214-82-00264<br>
                     통신판매업신고 서초 제 0706호<br>
                     콜센터 02-580-1300 (09:00~20:00, 연중무휴)<br><br class="pc">
                     copyrightⓒ2022 Seoul Arts Center. All rights Reserved.
@@ -532,54 +525,28 @@
         </div>
     </footer>
 
-
-    <script src="../js/flicking.pkgd.min.js"></script>
-    <script src="../js/flicking-plugins.js"></script>
-    <script>        
-        const mainImgSlider = new Flicking("#main-img-slider", {    // 메인 상단 이미지 슬라이드 init
-            moveType: "strict",
-            duration: 10,
+    <script>
+        //메인 상단 이미지 스와이퍼
+        const mainImgSlider = new Swiper('.main-img-slider', {
+            loop: true,
         });
-        const mainInfoSlider = new Flicking("#main-info-slider", {  // 메인 상단 정보 슬라이드 init
-            moveType: "strict",
-            duration: 10,
-            bound: true,
+
+        //메인 상단 정보 스와이퍼
+        const mainInfoSlider = new Swiper('.main-info-slider', {
+            loop: true,
+            effect: "fade",
+            fadeEffect: { crossFade: true },
+            virtualTranslate: true,
+            speed: 1000,
+            slidersPerView: 1,
+            pagination: {
+                el: ".main-swiper-pagination",
+            },
         });
-        mainInfoSlider.addPlugins(new Flicking.Plugins.Pagination(".flicking-pagination", { // 메인 상단 정보 슬라이드 pagination
-            type: "bullet"
-        }));
 
-        mainInfoSlider.addPlugins(new Flicking.Plugins.Sync({   //메인 상단 이미지-정보 synchronized
-            type: "camera",
-            synchronizedFlickingOptions: [
-                {
-                    flicking: mainImgSlider,
-                    isSlidable: true
-                },
-                {
-                    flicking: mainInfoSlider,
-                    isClickable: true,              
-                }
-            ]
-        }));
-
-        mainImgSlider.on('changed', function(){ //메인 상단 이미지 변화에 따른 정보 슬라이드 변경(pagination 변경을 위해 선언함)     
-            var idx = mainImgSlider.index;
-            mainInfoSlider.moveTo(idx);            
-        })
-
-
-        // 메인 상당 슬라이드 Fade 효과
-        mainInfoSlider.on('moveStart', function(){
-            $('.main-info-slider .flicking-camera').fadeOut(0);
-        }).on('moveEnd', function(){
-            $('.main-info-slider .flicking-camera').fadeIn(200);
-        })
-        mainImgSlider.on('moveStart', function(){
-            $('.main-info-slider .flicking-camera').fadeOut(0);
-        }).on('moveEnd', function(){
-            $('.main-info-slider .flicking-camera').fadeIn(200);
-        })
+        //메인 상단 스와이퍼 컨트롤 - 두 스와이퍼 동시 움직이기 위해 사용
+        mainImgSlider.controller.control = mainInfoSlider;
+        mainInfoSlider.controller.control = mainImgSlider;
 
 
 
@@ -595,6 +562,13 @@
                     prevEl: ".swiper-button-prev." + thisID,
                 },
             });
+        });
+
+
+
+        //메인 하단 배너 스와이퍼
+        const mainBannSlider = new Swiper('.main-banner-slider', {
+            loop: true,
         });
     </script>
 </body>
