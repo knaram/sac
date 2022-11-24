@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">        
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script src="../js/ui-common.js"></script>
-    <title>예술의 전당</title>     
+    <title>예술의 전당</title>    
 </head>
 <body>
     <header>
@@ -92,29 +92,59 @@
         </div>
     </header>
 
-    <div id="container">
-        <div id="contents" class="w620 my-genres">        
-            <p class="page-title">회원가입</p>    
-            <h2>관심장르 2가지(선택)</h2>
-            <section>
-                <div class="btn-box type2">
-                    <input type="checkbox" class="btn" name="genre" id="genreA" disabled><label for="genreA">뮤지컬 - 선택불가 버튼</label> <!-- 선택불가일 경우 disabled 속성 추가 -->
-                    <input type="checkbox" class="btn" name="genre" id="genreB"><label for="genreB">오페라</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreC"><label for="genreC">클래식</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreD"><label for="genreD">무용</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreE"><label for="genreE">발레</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreF"><label for="genreF">연극</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreG"><label for="genreG">가족연극</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreH"><label for="genreH">교육</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreI"><label for="genreI">기타 (국악, 넌버벌, 전시 등)</label>
-                </div>
-                <p>※ 관심장르는 마이페이지에서 수정 가능합니다.</p>
+    <div id="container" class="pb-0">
+        <div id="contents" class="w960">
+            <p class="page-title">회원가입</p>
+            <section class="join-young">
+                <form>
+                    <h2>만 14세 미만 회원 법정대리인 동의</h2>
 
-                <div class="btn-box fix-btm">
-                    <button type="button" class="btn btn-red">완료</button>
-                </div>
+                    <p class="top-txt">회원님은 만 14세 미만입니다.<br>(※ 만 14세 미만 회원 가입 시 법정대리인(부모님) 동의는 필수이며, 법정대리인의 본인인증(동의)를 거부할 경우 회원가입이 불가합니다.)</p>
+                    
+                    <h3>[필수] 법정대리인의 개인정보 수집 및 이용</h3>                    
+                    <table>
+                        <caption>법정대리인의 개인정보 수집 항목, 이용 목적, 보유기간 안내</caption>
+                        <tbody>
+                            <tr>
+                                <th>항목</th>
+                                <td>법정대리인 성명, 생년월일</td>                                
+                            </tr>
+                            <tr>
+                                <th>수집 · 이용 목적</th>
+                                <td>만 14세 미만 회원의 법정대리인 정보<br>(개인 정보보호법 제 22조 5항)</td>                                
+                            </tr>
+                            <tr>
+                                <th>보유기간</th>
+                                <td><em>만 14세 이상이 된 날로부터 3개월 이내</em></td>                                
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>※ 위의 개인정보 수집 및 이용에 대한 동의를 거부할 권리가 있습니다. 그러나, 동의를 거부할 경우 회원가입이 불가할 수 있습니다.</p>
+                    <div class="txt-box">
+                        <p>위와 같이 개인정보를 수집 및 이용하는데 동의하십니까? (필수)</p>
+                        <input type="radio" name="agreeC" id="agreeCY"><label for="agreeCY">동의</label>
+                        <input type="radio" name="agreeC" id="agreeCN"><label for="agreeCN">미동의</label>
+                    </div>
+                    
+                    <h2>법정대리인의 본인인증</h2>
+                    <div class="ipt-row pc-flex">
+                        <div class="ipt-row">
+                            <label for="deputy-name">법정대리인 성명</label>
+                            <input type="text" class="ipt-txt" name="deputy-name" id="deputy-name">
+                        </div>
+                        <div class="ipt-row flex-2">
+                            <label for="deputy-birth">법정대리인 생년월일(8자리)</label>
+                            <input type="text" class="ipt-txt" name="deputy-birth" id="deputy-birth">
+                        </div>
+                    </div>
+
+                    <div class="btn-box">
+                        <button type="button" class="btn">휴대폰 인증</button>
+                        <button type="button" class="btn">아이핀 인증</button>
+                    </div>
+                </form>
             </section>
-        </div>
+        </div> 
     </div>
     
     <footer class="pc">

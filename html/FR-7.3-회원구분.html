@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">        
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script src="../js/ui-common.js"></script>
-    <title>예술의 전당</title>     
+    <title>예술의 전당</title>    
 </head>
 <body>
     <header>
@@ -92,29 +92,24 @@
         </div>
     </header>
 
-    <div id="container">
-        <div id="contents" class="w620 my-genres">        
-            <p class="page-title">회원가입</p>    
-            <h2>관심장르 2가지(선택)</h2>
+    <div id="container" class="pb-0">
+        <div id="contents" class="w960">
+            <p class="page-title">회원가입</p>
             <section>
-                <div class="btn-box type2">
-                    <input type="checkbox" class="btn" name="genre" id="genreA" disabled><label for="genreA">뮤지컬 - 선택불가 버튼</label> <!-- 선택불가일 경우 disabled 속성 추가 -->
-                    <input type="checkbox" class="btn" name="genre" id="genreB"><label for="genreB">오페라</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreC"><label for="genreC">클래식</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreD"><label for="genreD">무용</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreE"><label for="genreE">발레</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreF"><label for="genreF">연극</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreG"><label for="genreG">가족연극</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreH"><label for="genreH">교육</label>
-                    <input type="checkbox" class="btn" name="genre" id="genreI"><label for="genreI">기타 (국악, 넌버벌, 전시 등)</label>
+                <h2>회원구분</h2>
+                 
+                <div class="gray-box">
+                    <p class="subs">일반회원</p>
+                    <p class="info">만 14세 이상 내국인</p>
+                    <button type="button" class="btn btn-red">가입하기</button>
                 </div>
-                <p>※ 관심장르는 마이페이지에서 수정 가능합니다.</p>
-
-                <div class="btn-box fix-btm">
-                    <button type="button" class="btn btn-red">완료</button>
+                <div class="gray-box">
+                    <p class="subs">어린이 회원</p>
+                    <p class="info">만 14세 미만 내국인</p>
+                    <button type="button" class="btn btn-red">가입하기</button>
                 </div>
             </section>
-        </div>
+        </div> 
     </div>
     
     <footer class="pc">

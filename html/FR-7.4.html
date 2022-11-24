@@ -68,6 +68,10 @@
                             <dt>나의 시청권</dt>
                             <dd>구독중인 시청권이 없습니다</dd>
                         </dl>
+                        <dl class="subs-box mw">
+                            <dt>나의 시청권</dt>
+                            <dd><em>월간 정기 구독 중입니다.</em></dd>
+                        </dl>
                     </div>
                     <!-- //로그인 전 -->
 
@@ -99,23 +103,27 @@
                         <input type="text" class="ipt-txt" name="name" id="name" value="홍길동" readonly>
                     </div>
 
-                    <div class="ipt-row">
-                        <label for="birthDate">생년월일 *</label>
-                        <div class="ipt-row flex">
-                            <div class="ipt-row">                        
-                                <input type="text" class="ipt-txt" name="birthDate" id="birthDate" value="19991111" readonly>
-                            </div>
-                            <div class="ipt-row">
-                                <input type="radio" name="dateType" id="dateTypeA" checked disabled><label for="dateTypeA">양력</label>
-                                <input type="radio" name="dateType" id="dateTypeB" disabled><label for="dateTypeB">음력</label>
+                    <div class="ipt-row pc-flex">
+                        <div class="ipt-row flex-2">
+                            <label for="birthDate">생년월일 *</label>
+                            <div class="ipt-row flex">
+                                <div class="ipt-row">                        
+                                    <input type="text" class="ipt-txt" name="birthDate" id="birthDate" value="19991111" readonly>
+                                </div>
+                                <div class="ipt-row">
+                                    <input type="radio" name="dateType" id="dateTypeA" checked disabled><label for="dateTypeA">양력</label>
+                                    <input type="radio" name="dateType" id="dateTypeB" disabled><label for="dateTypeB">음력</label>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="ipt-row">
-                        <p class="label">성별 *</p>
-                        <input type="radio" name="gender" id="genderM" checked disabled><label for="genderM">남자</label>
-                        <input type="radio" name="gender" id="genderF" disabled><label for="genderF">여자</label>
+                        <div class="ipt-row">
+                            <p class="label">성별 *</p>
+                            <div class="ipt-row flex">
+                                <input type="radio" name="gender" id="genderM" checked disabled><label for="genderM">남자</label>
+                                <input type="radio" name="gender" id="genderF" disabled><label for="genderF">여자</label>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="ipt-row with-btn">
@@ -139,7 +147,7 @@
                         <p class="error">비밀번호가 일치하지 않습니다.</p>     
                     </div>
 
-                    <div class="ipt-row ipt-group">
+                    <!-- <div class="ipt-row ipt-group">
                         <div class="ipt-row with-btn">
                             <label for="address">주소 *</label>
                             <input type="text" class="ipt-txt" name="address" id="address" readonly>
@@ -151,7 +159,7 @@
                         <div class="ipt-row">
                             <input type="text" class="ipt-txt" name="address" id="address3">
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="ipt-row">
                         <label for="contact">연락처(휴대폰 번호) *</label>
@@ -197,6 +205,13 @@
 
                     <div class="btn-box">
                         <button type="button" class="btn btn-red">가입하기</button>
+                        <button type="button" class="btn btn-red" disabled>가입하기</button>
+                        <!--                         
+                        button태그일 경우 disabled 속성 추가
+                        <button type="button" class="btn btn-red" disabled>button disabled</button>
+                        a태그일 경우 disabled 클래스 추가
+                        <a href="#"" class="btn btn-red disabled">a disabled</a> 
+                        -->
                     </div>
                 </form>
             </section>
