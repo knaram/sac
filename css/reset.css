@@ -16,6 +16,7 @@ br {font-family:sans-serif;}
 ::placeholder {color:#868686;}  
 :-ms-input-placeholder {color:#868686;}
 ::-ms-input-placeholder {color:#868686;}
+:focus {outline:none;}
 
 @font-face {
     font-family:'SpoqaHanSansNeo';

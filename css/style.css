@@ -14,7 +14,7 @@ body {width:100%; background-color:#0D0D0D; color:#fff; font-size:1.4rem; line-h
 img {width:100%;}
 .blind {font-size:0; width:0px; height:0px; overflow:hidden;}
 .txt-red {color:#E00A31 !important;}
-.txt-gray {color:#868686;}
+.txt-gray {color:#868686 !important;}
 .fs-12 {font-size:1.2rem; line-height:1.4rem;}
 .bg-gray {background:#1E1E1E;}
 .ta-center {text-align:center !important;}
@@ -27,7 +27,7 @@ img {width:100%;}
 
 .has-brt {border-top:1px solid #252525; padding-top:20px;}
 
-.btn {display:inline-block; width:100%; background:#3D3D3D; border-radius:4px; line-height:4.4rem; height:44px; padding:0 12px; font-size:1.5rem; transition:all .3s; box-sizing:border-box; text-align:center; font-weight:700;}
+.btn {display:inline-block; width:100%; background:#3D3D3D; border-radius:4px; line-height:4.4rem; height:44px; padding:0 12px; font-size:1.5rem; transition:all .3s; box-sizing:border-box; text-align:center; font-weight:500;}
 .btn + .btn {margin-top:10px;}
 .btn.selected {background:#E00A31;}
 .btn-red {background:#E00A31;}
@@ -40,12 +40,12 @@ img {width:100%;}
 .btn-box {margin:20px 0 14px;}
 .btn-box.fix-btm {position:fixed; width:100%; left:0; bottom:0; padding:14px 20px; margin:0; background:#0D0D0D;}
 
-.btn-util-menu {font-size:0; width:25px; height:20px; background:url('../images/btn_menu.png') no-repeat; background-size:100% auto;}
+.btn-util-menu {font-size:0; width:25px; height:25px; background:url('../images/btn_menu.png') no-repeat; background-size:100% 100%;}
 .btn-util-menu.close {background:url('../images/icons.png') -24px 0px no-repeat; background-size:auto 80px;}
 .btn-back {font-size:0; width:24px; height:24px; background:url('../images/icons.png') 0 0 no-repeat; background-size:auto 80px;}
 .btn-play {font-size:0; width:53px; height:50px; background:url('../images/icons.png') 0 -26px no-repeat; background-size:auto 80px;}
 .btn-search {width:20px; height:20px; font-size:0; background:url('../images/icons.png') -52px -1px no-repeat; background-size:auto 80px;}
-.btn-del {width:12px; height:12px; font-size:0; background:url('../images/icons.png') -103px -27px no-repeat; background-size:auto 80px;}
+.btn-del {width:15px; height:15px; font-size:0; background:url('../images/icons.png') -87px -25px no-repeat; background-size:auto 80px;}
 .btn-show-pw {position:absolute; color:#868686; right:14px; top:50%; transform:translateY(-50%); background:#000; padding:0 14px;}
 .btn-close {font-size:0; width:24px; height:24px; background:url('../images/icons.png') -24px 0px no-repeat; background-size:auto 80px;}
 .icon-play {display:inline-block; width:11px; height:14px; background:url('../images/icons.png') -117px -25px no-repeat; background-size:auto 80px; vertical-align:baseline; margin-right:10px;}
@@ -179,7 +179,7 @@ input[type='checkbox']:checked.toggle + label .toggle:before {left:17px;}
 .flag + .flag {margin-left:6px;}
 
 h1 {font-size:1.8rem; font-weight:500;}
-h2 {font-size:1.8rem; font-weight:700; line-height:1.8rem; margin:0 0 20px;}
+h2 {font-size:1.8rem; font-weight:500; line-height:1.8rem; margin:0 0 20px;}
 h3 {font-size:1.4rem; margin:30px 0 14px;}
 h3:first-child {margin:0 0 14px;}
 section + section {margin-top:50px;}
@@ -211,6 +211,7 @@ header .btn-close {position:absolute; right:20px; top:50%; transform:translateY(
 #menu .account-util .subs-box dt {display:inline-block; font-weight:700; padding-right:14px;}
 #menu .account-util .subs-box dd {display:inline-block; width:calc(100% - 85px); text-align:right;}
 #menu .links a {position:relative; display:block; padding:15px 0; font-size:1.6rem; line-height:1.6rem;}
+#menu .links a.pc {display:none;}
 #menu .links a:after {content:''; position:absolute; right:0; top:50%; transform:translateY(-50%); width:12px; height:12px; background:url('../images/icons.png') -77px -5px no-repeat; background-size:auto 80px;}
 
 #nav.pc {display:none;}
@@ -303,6 +304,13 @@ footer .sns-list ul li a.pod {background-position:-108px -36px;}
 .type .age12 {background-position:-30px 0;}
 .type .age15 {background-position:-60px 0;}
 .type .age18 {background-position:-90px 0;}
+.type .subject {background-position:-120px 0;}
+.type .sensuality {background-position:-150px 0;}
+.type .violence {background-position:-180px 0;}
+.type .line {background-position:-210px 0;}
+.type .horror {background-position:-240px 0;}
+.type .drug {background-position:-270px 0;}
+.type .copy {background-position:-300px 0;}
 .show .info .type + dl {margin-top:14px;}
 .show .info dl {font-size:0; color:#B6B6B6;}
 .show .info dl dt {display:inline-block; width:70px; font-size:1.4rem; font-weight:700; margin-right:10px; margin-bottom:10px;}
@@ -310,8 +318,10 @@ footer .sns-list ul li a.pod {background-position:-108px -36px;}
 .show .info dl dt.desc {display:block; margin-top:10px;}
 .show .info dl dt.desc + dd {display:block; width:100%;}
 
-.search-box.fixed {position:fixed; left:0; top:46px; width:100%; padding:20px 20px 0; box-sizing:border-box; background:#0D0D0D;} 
+.search-box {width:480px; margin:0 auto 70px;}
+.search-box.fixed {position:fixed; left:0; top:46px; width:100%; padding:20px 20px 0; box-sizing:border-box; background:#0D0D0D; margin:0 auto;} 
 .search-box.fixed .ipt-search {margin-bottom:10px;}
+.search-box > p {color:#b6b6b6; text-align:center;}
 .ipt-search {position:relative; margin-bottom:20px;}
 .ipt-search .ipt-txt {padding-left:44px;}
 .ipt-search .btn-search {position:absolute; left:14px; top:50%; transform:translateY(-50%); z-index:1;}
@@ -501,19 +511,21 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     #nav .sub-menu a {display:block; text-align:left; font-size:1.5rem; line-height:1.5rem; width:100%; padding:9px 24px; box-sizing:border-box;}
     #nav .sub-menu a:hover {background:#3D3D3D;}
 
-    #menu {width:180px; height:auto; background:#252525; top:80px; transition:none; overflow:hidden;}
-    #menu.open {position:absolute; right:60px !important;}
+    #menu {width:160px; height:auto; background:#252525; top:74px; transition:none; overflow:hidden;}
+    #menu.open {position:absolute; right:0 !important;}
     #menu .menu-header {display:none;}
-    #menu .account-util {padding:0 24px 16px; border-color:#3D3D3D; margin-bottom:16px;}
+    #menu .account-util {padding:0 24px 16px; border-color:#3D3D3D; margin-bottom:11px;}
     #menu .account-util .txt {font-size:1.3rem; line-height:100%}
-    #menu .contents {padding:16px 0;}
+    #menu .contents {padding:16px 0 11px;}
     #menu .account-util button {font-size:1.4rem; line-height:2.7rem; height:27px; margin-top:13px;}
     #menu .account-util .name {margin-top:10px; font-size:1.2rem; line-height:1.8rem;}
     #menu .account-util .name em {font-size:1.7rem;}
-    #menu .links {padding:0 24px;}
-    #menu .links a {font-size:1.5rem; line-height:1.5rem; padding:0;}
+    #menu .links {padding:0;}
+    #menu .links a {font-size:1.5rem; line-height:1.5rem; padding:9px 20px;}
+    #menu .links a.pc {display:block;}
+    #menu .links a.selected {color:#E00A31;}
+    #menu .links a:hover {background:#3D3D3D;}
     #menu .links a:after {content:none;}
-    #menu .links a + a {margin-top:14px;}
 
     footer {padding:50px 0;}
     footer .inner {padding:0 20px;}
@@ -588,6 +600,13 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     .type .age12 {background-position:-50px 0;}
     .type .age15 {background-position:-100px 0;}
     .type .age18  {background-position:-150px 0;}
+    .type .subject {background-position:-200px 0;}
+    .type .sensuality {background-position:-250px 0;}
+    .type .violence {background-position:-300px 0;}
+    .type .line {background-position:-350px 0;}
+    .type .horror {background-position:-400px 0;}
+    .type .drug {background-position:-450px 0;}
+    .type .copy {background-position:-500px 0;}
     .show .info .type + dl {margin-top:20px;}
     .show .info dl dt {margin-right:40px; margin-bottom:20px; font-size:1.8rem;}
     .show .info dl dd {width:calc(100% - 110px); margin-bottom:20px; font-size:1.8rem;} 
@@ -600,6 +619,7 @@ section.terms .txt {width:100%; white-space:pre-wrap; word-break:break-all; font
     .login-box {position:relative; background:#1E1E1E; padding:80px 90px;}
     .login-box form {width:350px;}    
     .login-box h3 {font-size:1.8rem;}
+    .login-box .txt-gray {font-size:1.4rem;}
     .login-box .account-util {width:350px; padding:24px 0 0; margin-bottom:0; border-bottom:0;}
     .login-box .sns-login {position:absolute; right:90px; top:80px; width:390px; border-left:1px solid #3D3D3D; padding:0 0 58px 40px;}
     .login-box .sns-login h2 {margin:0 0 20px; font-size:1.8rem;}
