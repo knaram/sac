@@ -41,7 +41,7 @@
             <!-- //GNB -->
 
             <button type="button" class="btn-back">이전</button>
-            <h1>비밀번호 변경</h1>
+            <h1>회원정보 변경</h1>
             <button type="button" class="btn-util-menu pc" onclick="menuToggle()">메뉴</button>
         </div>
     </header>
@@ -94,26 +94,17 @@
 
     <div id="container">
         <div id="contents" class="w620">
-            <p class="page-title">비밀번호 변경</p>
+            <p class="page-title">회원정보 변경</p>
             <section>
                 <form>
+                    <p class="mb-20">회원정보 변경을 위해서는 비밀번호 입력이 필요합니다.</p>
                     <div class="ipt-row">
-                        <label for="currentPw">현재 비밀번호</label>
-                        <input type="password" class="ipt-txt" name="currentPw" id="currentPw">
-                    </div>
-                    <div class="ipt-row">
-                        <label for="newPw">새 비밀번호</label>
-                        <input type="password" class="ipt-txt" name="newPw" id="newPw">
-                        <p class="ipt-noti">영문 대소문자, 숫자, 특수문자 (~!@#()-_+)를 포함해 9~16자리만 사용가능합니다.</p>                        
-                    </div>
-                    <div class="ipt-row">
-                        <label for="newPwchk">새 비밀번호 확인</label>
-                        <input type="password" class="ipt-txt error" name="newPwchk" id="newPwchk"> <!-- 에러일 경우 error클래스 추가 -->
-                        <p class="error">비밀번호가 일치하지 않습니다.</p>     
+                        <label for="password">비밀번호 입력</label>
+                        <input type="password" class="ipt-txt" name="password" id="password">
                     </div>
                     <div class="btn-box">
                         <button type="button" class="btn btn-xsmall pc">취소</button>
-                        <button type="button" class="btn btn-red">저장하기</button>
+                        <button type="button" class="btn btn-red">확인</button>
                     </div>
                 </form>
             </section>
