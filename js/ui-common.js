@@ -78,6 +78,7 @@ $(document).ready(function(){
         }
     })
 
+    //체크박스 모두 선택
     $('.chk-list input').change(function(){
         var total = $(this).parent().parent().find('input').length - 1;
 		var checked = $(this).parent().parent().find('li:not(".checkAll") input:checked').length;
@@ -89,4 +90,9 @@ $(document).ready(function(){
         }
     })
 
+    //셀렉트박스
+    $('.select-wrap .select').change(function(){
+        var txt = $(this).find('option:selected').text();
+        $(this).parent().find('.select-txt').text(txt);
+    })
 })
