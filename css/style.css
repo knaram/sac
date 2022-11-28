@@ -52,7 +52,7 @@ img {width:100%;}
 .btn-show-pw {position:absolute; color:#868686; right:14px; top:50%; transform:translateY(-50%); background:#000; padding:0 14px;}
 .btn-close {font-size:0; width:24px; height:24px; background:url('../images/icons.png') -24px 0px no-repeat; background-size:auto 80px;}
 .icon-play {display:inline-block; width:11px; height:14px; background:url('../images/icons.png') -117px -25px no-repeat; background-size:auto 80px; vertical-align:baseline; margin-right:10px;}
-.icon-bill {display:inline-block; width:16px; height:16px; background:url('../images/icons.png') -111px -3px no-repeat; background-size:auto 80px; vertical-align:middle; font-size:0;}
+.icon-bill {display:inline-block; width:16px; height:16px; background:url('../images/icons.png') -95px -3px no-repeat; background-size:auto 80px; vertical-align:middle; font-size:0;}
 
 table {width:100%; vertical-align:top; text-align:left; font-size:1.2rem; margin-bottom:14px;}
 table th {background:#1E1E1E; padding:9px 12px; border:1px solid #3D3D3D;}
@@ -128,8 +128,8 @@ select::-ms-expand {display:none;}
 .list a {display:block; width:100%; height:100%;}
 .list .tit {display:block; display:-webkit-box; line-height:1.8rem; height:36px; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis; font-size:1.5rem; font-weight:500; margin-top:10px;}
 .list .date {display:block; font-size:1.2rem; line-height:1.2rem; color:#868686; margin-top:6px;}
-.list.card li {display:inline-block; width:calc((100% - 20px) / 2); margin-bottom:40px; vertical-align:top;}
-.list.card li:nth-child(2n) {margin-left:20px;}
+.list.card li {display:inline-block; width:calc((100% - 20px) / 2); margin-bottom:40px; margin-right:20px; vertical-align:top;}
+.list.card li:nth-child(even) {margin-right:0;}
 .list.one-card li + li {margin-top:30px;}
 .list.one-card .tit {height:20px; -webkit-line-clamp:1; line-height:2rem;}
 .list.horizontal li + li {margin-top:14px;}
@@ -137,10 +137,6 @@ select::-ms-expand {display:none;}
 .list.horizontal img {float:left; width:144px;}
 .list.horizontal .info {float:left; width:calc(100% - 154px); vertical-align:middle; position:absolute; padding-left:10px; top:50%; transform:translateY(-50%);}
 .list.horizontal .tit {height:auto; max-height:40px; margin-top:0;}
-
-@media only screen and (min-width:640px){   
-    .main-list-wrap.live .list.one-card li + li {margin-top:0;}
-}
 
 .list-tit {padding-top:10px; font-size:1.3rem; font-weight:700; margin-top:10px;}
 .list-tit + ul {margin-top:10px;}
@@ -278,10 +274,6 @@ footer .sns-list ul li a.pod {background-position:-108px -36px;}
 .main #contents {padding:20px 0 20px 20px; overflow:hidden;}
 .bann-area {display:block; flex:1; padding-right:20px;}
 .bann-promo {display:block; width:100%; height:66px; margin:20px 0; text-align:center; background-repeat:no-repeat; background-position:center; background-size:auto 100%; font-size:0;}
-@media only screen and (min-width:640px){    
-    .bann-area {display:flex;}    
-    .bann-promo {background-size:100% auto;}
-}
 .main-banner-slider {margin:0 20px 0 0; overflow:hidden;}
 
 .main-list {margin:50px 0;}
@@ -406,7 +398,7 @@ footer .sns-list ul li a.pod {background-position:-108px -36px;}
 .subscribe .list li .status {font-size:1.6rem; display:inline-block; width:55px; vertical-align:top; padding-right:10px;}
 .subscribe .list li .info {display:inline-block; width:calc(100% - 65px);}
 .subscribe .list li .info .subs {font-size:1.6rem; font-weight:500; margin-bottom:10px;}
-.subscribe .list li .info .icon-bill {margin:-1px 0 0 10px; background-position:-95px -3px;}
+.subscribe .list li .info .icon-bill {margin:-1px 0 0 10px;}
 .subscribe .list li.in-use .info .icon-bill {background-position:-112px -3px;}
 .subscribe .list li .info dl {line-height:1.4rem;}
 .subscribe .list li .info dt {font-size:1.2rem; display:inline-block; width:55px; padding-right:10px; margin-bottom:6px; vertical-align:top;}
@@ -492,6 +484,41 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
 #contents.service .service-wrap .logo {position:absolute; left:50%; top:350px; width:160px; transform:translateX(-50%);}
 
 
+@media only screen and (min-width:640px){    
+    .main-list-wrap.live .list.one-card li + li {margin-top:0;}
+
+    .bann-area {display:flex;}    
+    .bann-promo {background-size:100% auto;}
+
+    .list.card li {width:calc((100% - 60px) / 3); margin-right:30px;}
+    .list.card li:nth-child(even) {margin-right:30px;}
+    .list.card li:nth-child(3n) {margin-right:0;}
+}
+
+
+@media only screen and (min-width:720px){
+    .subscribe .list-head {display:block; border-top:1px solid #252525; font-size:0; margin-top:70px; background:#1E1E1E;}
+    .subscribe .list-head span {display:inline-block; padding:20px; text-align:left; box-sizing:border-box; font-size:1.4rem; font-weight:500;}
+    .subscribe .list-head span:nth-child(1) {width:85px;}
+    .subscribe .list-head span:nth-child(2) {width:calc(100% - 527px);}
+    .subscribe .list-head span:nth-child(3) {width:110px; text-align:center;}
+    .subscribe .list-head span:nth-child(4) {width:166px;}
+    .subscribe .list-head span:nth-child(5) {width:166px;}
+    .subscribe .list {text-align:left; margin-top:0;}
+    .subscribe .list li {padding:12px 0; font-size:0;}
+    .subscribe .list li .status {display:inline-block; width:45px; padding:0 20px; vertical-align:middle; font-size:1.4rem;}
+    .subscribe .list li.in-use .status {color:#E00A31;}
+    .subscribe .list li .info {display:inline-block; width:calc(100% - 85px);}
+    .subscribe .list li .info .subs {display:inline-block; width:calc(100% - 442px); font-size:1.4rem; padding:0 20px; margin:0; vertical-align:middle;}    
+    .subscribe .list li .info dl {width:auto; display:inline-block;}
+    .subscribe .list li .info dl dt {display:none;}
+    .subscribe .list li .info dl dd {font-size:1.4rem; padding:0 20px; line-height:2.4rem; margin:0; vertical-align:middle;}
+    .subscribe .list li .info dl dd:nth-child(2) {width:110px; text-align:center;}
+    .subscribe .list li .info dl dd:nth-child(4) {width:166px;}
+    .subscribe .list li .info dl dd:nth-child(6) {width:166px;}    
+}
+
+
 @media only screen and (min-width:960px){
     html.lock {height:auto; overflow:initial;}
     body {font-size:1.8rem; line-height:2.8rem;}
@@ -540,7 +567,7 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
     .btn-search {width:24px; height:24px; background:url('../images/icons.png') -58px -1px no-repeat; background-size:auto 90px;}
     .btn-show-pw {font-size:1.4rem;}
     .ipt-row.with-btn .btn {width:110px; height:44px; line-height:4.4rem;}
-    .icon-bill {width:20px; height:20px; background:url('../images/icons.png') -127px -3px no-repeat; background-size:auto 92px;}    
+    .icon-bill {width:20px; height:20px; background:url('../images/icons.png') -108px -3px no-repeat; background-size:auto 92px;}    
     
     .search-box {width:480px; margin:0 auto 70px;}
     .ipt-search .btn-search {left:20px;}
@@ -577,10 +604,10 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
     #menu {width:160px; height:auto; background:#252525; top:74px; transition:none; overflow:hidden;}
     #menu.open {position:absolute; right:0 !important;}
     #menu .menu-header {display:none;}
-    #menu .account-util {padding:0 24px 16px; border-color:#3D3D3D; margin-bottom:11px;}
+    #menu .account-util {padding:0 24px 10px; border-color:#3D3D3D; margin-bottom:11px;}
     #menu .account-util .txt {font-size:1.3rem; line-height:100%}    
-    #menu .contents {padding:16px 0 11px;}
-    #menu .account-util button {font-size:1.4rem; line-height:2.7rem; height:27px; margin-top:13px;}
+    #menu .contents {padding:0 0 11px;}
+    #menu .account-util button {font-size:1.4rem; line-height:2.7rem; height:27px; margin-top:10px; vertical-align:top;}
     #menu .account-util .name {margin-top:10px; font-size:1.2rem; line-height:1.8rem;}
     #menu .account-util .name em {font-size:1.7rem;}
     #menu .links {padding:0;}
@@ -627,9 +654,8 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
     .list-tit {font-size:1.8rem;}
     .subscribe .dot-list {font-size:1.5rem; line-height:2.2rem;}
 
-    .list.card li {max-width:275px; width:calc((100% - 120px) / 4); margin:0 40px 60px 0;}
-    .list.card li:nth-child(2n) {margin-left:0;}
-    .list.card li:nth-child(4n) {margin:0 0 60px 0;}
+    .list.card li {max-width:275px; width:calc((100% - 120px) / 4); margin:0 40px 60px 0 !important;}    
+    .list.card li:nth-child(4n) {margin:0 0 60px 0 !important;}
     .list .tit {font-size:2rem; line-height:2.5rem; height:50px;}
     .list .date {font-size:1.6rem; margin-top:8px; line-height:1.6rem;}
 
@@ -743,10 +769,6 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
     .subscribe .box .inner + .inner .pay-info span {padding-right:44px;}
     .subscribe .box .inner + .inner .btn-box {position:absolute; right:0; bottom:0;}
 
-    .subscribe .list-head span,
-    .subscribe .list li .info .subs,
-    .subscribe .list li .info dl dd {font-size:2rem;}
-
     .modal {height:auto; left:50%; top:50%; transform:translate(-50%, -50%); border-radius:5px;}
     .modal-title {font-size:3rem; padding:70px;}
     .modal-cont {font-size:1.4rem; padding:0 70px 70px;}
@@ -797,7 +819,7 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
     
     .btn-box .btn.pc {display:inline-block;}
 
-    .subscribe .box {width:960px; margin:0 auto 20px; padding:0; padding:50px 70px; text-align:left;}
+    .subscribe .box {max-width:960px; width:100%; margin:0 auto 20px; padding:0; padding:50px 70px; text-align:left;}
     .subscribe .box .inner {position:relative; overflow:hidden;}
     .subscribe .box .inner > * {display:inline-block; margin-bottom:0; vertical-align:middle;}     
     .subscribe .box .subs {position:absolute; left:70px; top:50%; transform:translateY(-50%); font-size:2.4rem; padding:0;}
@@ -807,27 +829,23 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
     .subscribe .box .inner + p {text-align:center; font-size:1.6rem;}
     .subscribe .box + .txt {font-size:1.8rem;}
 
-    .subscribe .list-head {display:block; border-top:1px solid #252525; font-size:0; margin-top:70px; background:#1E1E1E;}
-    .subscribe .list-head span {display:inline-block; padding:20px 30px; text-align:left; box-sizing:border-box; font-size:1.8rem; font-weight:500;}
-    .subscribe .list-head span:nth-child(1) {width:120px;}
-    .subscribe .list-head span:nth-child(2) {width:calc(100% - 726px);}
-    .subscribe .list-head span:nth-child(3) {width:140px; text-align:center;}
+    .subscribe .list-head span,
+    .subscribe .list li .info .subs,
+    .subscribe .list li .info dl dd {font-size:2rem;}
+    
+    .subscribe .list-head span:nth-child(1) {width: 110px;}
+    .subscribe .list-head span:nth-child(2) {width:calc(100% - 706px);}
+    .subscribe .list-head span:nth-child(3) {width:140px}
     .subscribe .list-head span:nth-child(4) {width:230px;}
-    .subscribe .list-head span:nth-child(5) {width:236px;}
-    .subscribe .list {text-align:left; margin-top:0;}
-    .subscribe .list li {padding:20px 0; font-size:0;}
-    .subscribe .list li .status {display:inline-block; width:60px; padding:0 30px; vertical-align:middle; font-size:1.8rem;}
-    .subscribe .list li.in-use .status {color:#E00A31;}
-    .subscribe .list li .info {display:inline-block; width:calc(100% - 120px);}
-    .subscribe .list li .info .subs {display:inline-block; width:calc(100% - 602px); font-size:1.8rem; padding:0 30px; margin:0; vertical-align:middle;}
-    .subscribe .list li .info .icon-bill {margin:-1px 0 0 10px; background-position:-108px -3px;}
+    .subscribe .list-head span:nth-child(5) {width:226px;}    
+    .subscribe .list li {padding:20px 0;}
+    .subscribe .list li .status {width:70px; font-size:2rem;}
+    .subscribe .list li .info .subs {width:calc(100% - 596px);}
+    .subscribe .list li .info {display:inline-block; width:calc(100% - 110px);}
+    .subscribe .list li .info dl dd:nth-child(2) {width:140px;}
+    .subscribe .list li .info dl dd:nth-child(4) {width:230px;}
+    .subscribe .list li .info dl dd:nth-child(6) {width:226px;}
     .subscribe .list li.in-use .info .icon-bill {background-position:-128px -3px;}
-    .subscribe .list li .info dl {width:auto; display:inline-block;}
-    .subscribe .list li .info dl dt {display:none;}
-    .subscribe .list li .info dl dd {font-size:1.8rem; padding:0 30px; line-height:2.4rem; margin:0; vertical-align:middle;}
-    .subscribe .list li .info dl dd:nth-child(2) {width:140px; text-align:center;}
-    .subscribe .list li .info dl dd:nth-child(4) {width:226px;}
-    .subscribe .list li .info dl dd:nth-child(6) {width:236px;}
 
     .subscribe.buy {font-size:0; text-align:center;}
     .subscribe.buy .txt {font-size:2rem; padding:14px 0 70px; }
@@ -911,21 +929,23 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
 
     .main-list ul li {width:275px;}
     .main-list ul li + li {margin-left:40px;}
-
-    .subscribe .list-head span:nth-child(1) {width:150px;}
-    .subscribe .list-head span:nth-child(2) {width:calc(100% - 846px);}
-    .subscribe .list-head span:nth-child(3) {width:170px}
-    .subscribe .list-head span:nth-child(4) {width:260px;}
-    .subscribe .list-head span:nth-child(5) {width:256px;}    
-    .subscribe .list li .status {width:90px;}
-    .subscribe .list li .info .subs {width:calc(100% - 696px);}
-    .subscribe .list li .info {display:inline-block; width:calc(100% - 150px);}
-    .subscribe .list li .info dl dd:nth-child(2) {width:170px;}
-    .subscribe .list li .info dl dd:nth-child(4) {width:260px;}
-    .subscribe .list li .info dl dd:nth-child(6) {width:256px;}   
-    
+        
     .main-list-wrap.live {width:100%; transform:none; padding:0 80px;}
     .main-list-wrap.live {width:1380px; transform:translateX(-80px);}
     .main-list-wrap.live .swiper-button-next, 
     .main-list-wrap.live .swiper-button-prev {display:block;}
+
+    .subscribe .list-head span {padding:20px 30px;}
+    .subscribe .list-head span:nth-child(1) {width:150px;}
+    .subscribe .list-head span:nth-child(2) {width:calc(100% - 856px);}
+    .subscribe .list-head span:nth-child(3) {width:170px}
+    .subscribe .list-head span:nth-child(4) {width:260px;}
+    .subscribe .list-head span:nth-child(5) {width:256px;}    
+    .subscribe .list li .status {width:90px; font-size:2rem; padding:0 30px;}
+    .subscribe .list li .info .subs {width:calc(100% - 686px); padding:0 30px;}
+    .subscribe .list li .info {display:inline-block; width:calc(100% - 170px);}
+    .subscribe .list li .info dl dd {padding:0 30px;}
+    .subscribe .list li .info dl dd:nth-child(2) {width:170px;}
+    .subscribe .list li .info dl dd:nth-child(4) {width:260px;}
+    .subscribe .list li .info dl dd:nth-child(6) {width:256px;}
 }
