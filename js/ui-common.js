@@ -41,7 +41,45 @@ function checkAll() {
     }
 }
 
+
+$(document).on('click', function(event){
+    if($(window).width() > 960){
+        if(!$(event.target).hasClass('nav-btn')){
+            if(!$(event.target).parent().hasClass('sub-menu')){
+                $('.sub-menu-wrap').removeClass('show');   
+            }
+        }
+    }
+});
+
+
 $(document).ready(function(){   
+
+    var nav  = $('.nav-btn');
+    //nav
+    nav.on('mouseenter', function(){
+        if($(window).width() > 960){
+            if($('.sub-menu-wrap').hasClass('show')){
+                $(this).next('.sub-menu-wrap').removeClass('show');    
+            }else {
+                $(this).next('.sub-menu-wrap').addClass('show');
+            }  
+        }                  
+    })   
+    nav.on('click', function(){
+        if($(window).width() <= 960){
+            if($('.sub-menu-wrap').hasClass('show')){
+                $(this).next('.sub-menu-wrap').removeClass('show');    
+            }else {
+                $(this).next('.sub-menu-wrap').addClass('show');
+            }  
+        }                  
+    })   
+    $('.sub-menu-wrap').on('mouseleave', function(){
+        if($(window).width() > 960){
+            $('.sub-menu-wrap').removeClass('show'); 
+        }
+    })
 
     //검색어 지우기 버튼 숨기기/보이기
     $('.ipt-search .ipt-txt').bind("focus change keyup paste", function(){
@@ -96,3 +134,4 @@ $(document).ready(function(){
         $(this).parent().find('.select-txt').text(txt);
     })
 })
+
