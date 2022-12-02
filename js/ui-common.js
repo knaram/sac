@@ -21,12 +21,14 @@ function openModal(e) {
         }, 3000);
     }else {
         $('.modal-wrap[data-id=' + modalId + ']').show();
+        $('html').attr('style','height:100%; overflow:hidden;');
     }
 }
 
 //모달 닫기
 function closeModal() { 
     $(event.target).parent().parent().parent().hide();
+    $('html').attr('style','');
 }
 
 //모두 체크
@@ -70,8 +72,10 @@ $(document).ready(function(){
         if($(window).width() <= 960){
             if($('.sub-menu-wrap').hasClass('show')){
                 $(this).next('.sub-menu-wrap').removeClass('show');    
+                $('html').attr('style','');
             }else {
                 $(this).next('.sub-menu-wrap').addClass('show');
+                $('html').attr('style','height:100%; overflow:hidden;');
             }  
         }                  
     })   

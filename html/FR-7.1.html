@@ -17,7 +17,7 @@
             <div class="logo"><img src="../images/logo.png" alt="예술의 전당 Seoul Arts Center"></div>
 
             <!-- GNB -->
-            <div id="nav">
+            <div id="nav" class="pc">
                 <a class="nav-btn home" href="javascript:;">홈</a> <!-- 선택된 메뉴에 selected 클래스 추가 -->
                 <span class="has-sub">
                     <a class="nav-btn genre" href="javascript:;">장르</a>
@@ -47,8 +47,8 @@
             <!-- 메뉴 -->
             <div id="menu">
                 <div class="menu-header">
+                    <button type="button" class="btn-back" onclick="menuToggle()">이전</button>
                     <p class="tit">메뉴</p>
-                    <button type="button" class="btn-close" onclick="menuToggle()">닫기</button>
                 </div>
                 <div class="contents">
                     <!-- 로그인 전 -->

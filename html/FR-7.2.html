@@ -17,7 +17,7 @@
             <div class="logo"><img src="../images/logo.png" alt="예술의 전당 Seoul Arts Center"></div>
 
             <!-- GNB -->
-            <div id="nav">
+            <div id="nav" class="pc">
                 <a class="nav-btn home" href="javascript:;">홈</a> <!-- 선택된 메뉴에 selected 클래스 추가 -->
                 <span class="has-sub">
                     <a class="nav-btn genre" href="javascript:;">장르</a>
@@ -47,8 +47,8 @@
             <!-- 메뉴 -->
             <div id="menu">
                 <div class="menu-header">
+                    <button type="button" class="btn-back" onclick="menuToggle()">이전</button>
                     <p class="tit">메뉴</p>
-                    <button type="button" class="btn-close" onclick="menuToggle()">닫기</button>
                 </div>
                 <div class="contents">
                     <!-- 로그인 전 -->
@@ -143,7 +143,7 @@
 
 본 약관은 필수 약관으로 가입을 위해서는 필히 동의하여야 합니다.
 </pre>                            
-                            <button type="button" class="btn btn-xsmall">약관 다운로드</button>
+                            <button type="button" class="btn btn-xsmall">전문보기</button>
                         </div>
                     </div>
                     <div class="txt-box">
@@ -180,8 +180,7 @@
                     </div>
 
 
-                    <h3>[선택] 마케팅 활용에 관한 동의 (동의거부 가능)</h3>
-                    <p>예술의전당 회원가입을 위하여 개인정보보호법에 따라 아래와 같이 개인정보를 수집·이용하고자 합니다. 내용을 자세히 읽으신 후 동의 여부를 결정하여 주십시오.</p>
+                    <h3>[선택] 마케팅 활용 및 수신 동의 (동의거부 가능)</h3>
                     <table>
                         <caption>마케팅 활용 수집 항목, 이용 목적, 보유기간 안내</caption>
                         <tbody>
@@ -204,6 +203,13 @@
                         <p>위와 같이 개인정보의 마케팅 활용에 동의하십니까? (선택)</p>
                         <input type="radio" name="agreeC" id="agreeCY"><label for="agreeCY">동의</label>
                         <input type="radio" name="agreeC" id="agreeCN"><label for="agreeCN">미동의</label>
+                    </div>
+                    <div class="txt-box flex">
+                        <p>이메일 수신여부</p>
+                        <div class="ipt-row flex">
+                            <input type="radio" name="agreeD" id="agreeDY"><label for="agreeDY">동의</label>
+                            <input type="radio" name="agreeD" id="agreeDN"><label for="agreeDN">미동의</label>
+                        </div>
                     </div>
 
                     <div class="btn-box">

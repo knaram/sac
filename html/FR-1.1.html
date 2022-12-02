@@ -51,8 +51,8 @@
             <!-- 메뉴 -->
             <div id="menu">
                 <div class="menu-header">
+                    <button type="button" class="btn-back" onclick="menuToggle()">이전</button>
                     <p class="tit">메뉴</p>
-                    <button type="button" class="btn-close" onclick="menuToggle()">닫기</button>
                 </div>
                 <div class="contents">
                     <!-- 로그인 전 -->
@@ -113,7 +113,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide-info">
-                            <span class="flag">클래식</span>
+                            <span class="flag blue">무료</span><span class="flag">클래식</span>
                             <p class="tit">국립심포니 : DRs Pick II - 수수께끼</p>
                             <p class="txt">라벨의 마법같은 음악과 엘가의 따스함을 연주한다. 익살스러움을 가미한 이번 정기연주회의 프로그램은 8월의 무더위를 날리기에 적절한 음악적
                                 유머러스함까지 갖추었다. 무겁기만한 클래식 음악은 벗어던지고, 작곡가가 무슨 이야기를 할까 기대되는, 그런 재미있는 클래식 음악의 매력을 어필한다. 사실
@@ -124,7 +124,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="slide-info">
-                            <span class="flag">클래식</span>
+                            <span class="flag blue">무료</span><span class="flag">클래식</span>
                             <p class="tit">박수원 하프 독주회</p>
                             <p class="txt">하피스트 박수원은 예원학교와 서울예고를 수석으로 졸업하였으며, 세계적인 하피스트 Judy Loman에게 발탁되어 미국 커티스 음악원에서
                                 4년 전액 장학금을 받고 졸업하였다. 귀국 후 한국예술종합학교에서 석사학위를 취득하여 하프 연주자로서 기반을 탄탄히 쌓았으며 다양한 무대에서의 연주를 통해
@@ -173,7 +173,10 @@
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="img-box">
+                                        <span class="flag blue large">무료</span>
+                                        <img src="../images/@temp_03.png" alt="">
+                                    </span>                                    
                                     <span class="info">
                                         <span class="tit">크리스마스 조수미&이 무지치 내한공연 크리스마스 조수미&이 무지치 내한공연 크리스마스 조수미&이 무지치 내한공연</span>
                                     </span>
@@ -181,7 +184,10 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="img-box">
+                                        <span class="flag blue large">무료</span>
+                                        <img src="../images/@temp_04.png" alt="">
+                                    </span>                                
                                     <span class="info">
                                         <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
                                     </span>
@@ -189,7 +195,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_05.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_05.png" alt="">
+                                    </span>                                
                                     <span class="info">
                                         <span class="tit">디스커버 로맨티시즘</span>
                                     </span>
@@ -197,7 +205,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_06.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_06.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
                                     </span>
@@ -205,7 +215,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_03.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
                                     </span>
@@ -213,7 +225,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_04.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
                                     </span>
@@ -229,14 +243,16 @@
 
             <!-- 메인 리스트 -->
             <section class="main-list">
-                <h2>인기 공연 <a href="javascript:;" class="btn-txt">모두 보기 &#xE001;</a></h2>
+                <h2><span>인기 공연</span> <a href="javascript:;" class="btn-txt">모두 보기 &#xE001;</a></h2>
 
                 <div class="main-list-wrap">
                     <div class="swiper main-list-swiper" id="list02">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_04.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
                                     </span>
@@ -244,7 +260,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_05.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_05.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">디스커버 로맨티시즘</span>
                                     </span>
@@ -252,7 +270,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_06.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_06.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
                                     </span>
@@ -260,7 +280,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_03.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
                                     </span>
@@ -268,7 +290,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_04.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
                                     </span>
@@ -276,7 +300,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_03.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
                                     </span>
@@ -292,14 +318,16 @@
 
             <!-- 메인 리스트 -->
             <section class="main-list">
-                <h2>추천 공연 <a href="javascript:;" class="btn-txt">모두 보기 &#xE001;</a></h2>
+                <h2><span>추천 공연</span> <a href="javascript:;" class="btn-txt">모두 보기 &#xE001;</a></h2>
 
                 <div class="main-list-wrap">
                     <div class="swiper main-list-swiper" id="list03">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_05.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_05.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">디스커버 로맨티시즘</span>
                                     </span>
@@ -307,7 +335,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_06.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_06.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
                                     </span>
@@ -315,7 +345,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_03.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
                                     </span>
@@ -323,7 +355,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_04.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
                                     </span>
@@ -331,7 +365,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_03.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
                                     </span>
@@ -339,7 +375,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_04.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
                                     </span>
@@ -364,14 +402,16 @@
 
             <!-- 메인 리스트 -->
             <section class="main-list">
-                <h2>인기 공연 <a href="javascript:;" class="btn-txt">모두 보기 &#xE001;</a></h2>
+                <h2><span>인기 공연</span> <a href="javascript:;" class="btn-txt">모두 보기 &#xE001;</a></h2>
 
                 <div class="main-list-wrap">
                     <div class="swiper main-list-swiper" id="list04">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_06.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_06.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
                                     </span>
@@ -379,7 +419,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_03.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
                                     </span>
@@ -387,7 +429,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_04.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
                                     </span>
@@ -395,7 +439,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_03.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
                                     </span>
@@ -403,7 +449,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_04.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
                                     </span>
@@ -411,7 +459,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_05.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_05.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">디스커버 로맨티시즘</span>
                                     </span>
@@ -427,14 +477,16 @@
 
             <!-- 메인 리스트 -->
             <section class="main-list">
-                <h2>추천 공연 <a href="javascript:;" class="btn-txt">모두 보기 &#xE001;</a></h2>
+                <h2><span>추천 공연</span> <a href="javascript:;" class="btn-txt">모두 보기 &#xE001;</a></h2>
 
                 <div class="main-list-wrap">
                     <div class="swiper main-list-swiper" id="list05">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_06.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_06.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">김세일 마르쿠스 하둘라 듀오 리사이틀</span>
                                     </span>
@@ -442,7 +494,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_03.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
                                     </span>
@@ -450,7 +504,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_04.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
                                     </span>
@@ -458,7 +514,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_03.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_03.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">크리스마스 조수미&이 무지치 내한공연</span>
                                     </span>
@@ -466,7 +524,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_04.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_04.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">국립심포니 : DRs Pick II - 수수께끼</span>
                                     </span>
@@ -474,7 +534,9 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="javascript:;">
-                                    <img src="../images/@temp_05.png" alt="">
+                                    <span class="img-box">
+                                        <img src="../images/@temp_05.png" alt="">
+                                    </span>
                                     <span class="info">
                                         <span class="tit">디스커버 로맨티시즘</span>
                                     </span>
@@ -492,8 +554,14 @@
             <!-- 배너 -->
             <div class="main-banner-slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../images/@temp_02_1.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../images/@temp_02_1.png" alt=""></div>
+                    <div class="swiper-slide">
+                        <img src="../images/@temp_02_1.png" alt="" class="pc">
+                        <img src="../images/@temp_02_1_m.png" alt="" class="mw">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/@temp_02_1.png" alt="" class="pc">
+                        <img src="../images/@temp_02_1_m.png" alt="" class="mw">
+                    </div>
                 </div>
             </div>
             <!-- //배너 -->
@@ -573,7 +641,7 @@
                 el: ".main-swiper-pagination",
             },
             autoplay: {
-                delay: 3000,
+                delay: 5000,
             },
         });
 

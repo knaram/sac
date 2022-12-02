@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="lock">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
             <div class="logo"><img src="../images/logo.png" alt="예술의 전당 Seoul Arts Center"></div>
 
             <!-- GNB -->
-            <div id="nav">
+            <div id="nav" class="pc">
                 <a class="nav-btn home" href="javascript:;">홈</a> <!-- 선택된 메뉴에 selected 클래스 추가 -->
                 <span class="has-sub">
                     <a class="nav-btn genre" href="javascript:;">장르</a>
@@ -47,8 +47,8 @@
             <!-- 메뉴 -->
             <div id="menu">
                 <div class="menu-header">
+                    <button type="button" class="btn-back" onclick="menuToggle()">이전</button>
                     <p class="tit">메뉴</p>
-                    <button type="button" class="btn-close" onclick="menuToggle()">닫기</button>
                 </div>
                 <div class="contents">
                     <!-- 로그인 전 -->
@@ -92,7 +92,7 @@
         </div>
     </header>
     
-    <div id="container">
+    <div id="container" class="pb-0">
         <div class="preview-area">
             <video class="preview" src=""></video> <!-- 영상 영역에 preview 클래스 추가-->
             <button class="btn-play">재생</button>
@@ -107,9 +107,10 @@
 
                     <img src="../images/@temp_04.png" alt="">
                     <div class="txt">
+                        <span class="flag blue">무료</span>
                         <span class="flag">클래식</span>
                         <p class="tit">국립심포니 : DRs Pick II - 수수께끼</p>
-                        <span class="price">7일 | 15,00원</span>
+                        <span class="price">150분 | 예술의전당 오페라극장</span>
                     </div>
                 </div>
 
@@ -128,12 +129,8 @@
                         <span class="copy">모방위험</span> 
                     </div>
                     <dl>
-                        <dt>공연시간</dt>
-                        <dd>150분</dd>
                         <dt>공연일자</dt>
                         <dd>2022-09-08</dd>
-                        <dt>공연장소</dt>
-                        <dd>오페라극장</dd>
                         <dt>제작년도</dt>
                         <dd>2022</dd>
                         <dt>기획</dt>
@@ -142,8 +139,10 @@
                         <dd>예술의전당</dd>
                         <dt>배급</dt>
                         <dd>예술의전당</dd>
-                        <dt>출연</dt>
-                        <dd>지휘 - 다비트 라일란트, 클라리넷 - 라파엘 세베르, 국립심포니 오케스트라</dd>
+                        <dt>감독/지휘자</dt>
+                        <dd>다비트 라일란트</dd>
+                        <dt>출연진</dt>
+                        <dd>국립심포니 오케스트라, 클라리넷 - 라파엘 세베르 국립심포니 오케스트라, 클라리넷 - 라파엘 세베르 국립심포니 오케스트라, 클라리넷 - 라파엘 세베르</dd>
                         <dt class="desc">작품소개</dt>
                         <dd>
                             라벨의 마법같은 음악과 엘가의 따스함을 연주한다. 익살스러움을 가미한 이번 정기연주회의 프로그램은 8월의 무더위를 날리기에 적절한 음악적 유머러스함까지 갖추었다. 무겁기만한 클래식 음악은 벗어던지고, 작곡가가 무슨 이야기를 할까 기대되는, 그런 재미있는 클래식 음악의 매력을 어필한다. 사실 라벨의 어미 거위 모음곡도, 엘가의 수수께끼 변주곡도 작곡가와 관련된 누군가를 기쁘게 해주기 위해 작곡된 음악이라고 하니, 국립심포니의 연주도 관객들을 기쁘게 만들 수 있지 않을까 기대해 본다.<br><br>
@@ -193,5 +192,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        $(document).ready(function(){
+            if($(window).width() < 960){
+                var topH = $('.preview-area').height();
+                $('#contents').attr('style','height:calc(100% - '+topH+'px); overflow-y:scroll;');
+            }
+        });
+
+        $(window).resize(function(){
+            if($(window).width() < 960){
+                var topH = $('.preview-area').height();
+                $('#contents').attr('style','height:calc(100% - '+topH+'px); overflow-y:scroll;');
+            }else {
+                $('#contents').attr('style','');
+            }
+        })
+    </script>
 </body>
 </html>
