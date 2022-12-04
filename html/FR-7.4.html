@@ -17,7 +17,7 @@
             <div class="logo"><img src="../images/logo.png" alt="예술의 전당 Seoul Arts Center"></div>
 
             <!-- GNB -->
-            <div id="nav">
+            <div id="nav" class="pc">
                 <a class="nav-btn home" href="javascript:;">홈</a> <!-- 선택된 메뉴에 selected 클래스 추가 -->
                 <span class="has-sub">
                     <a class="nav-btn genre" href="javascript:;">장르</a>
@@ -103,18 +103,10 @@
                         <input type="text" class="ipt-txt" name="name" id="name" value="홍길동" readonly>
                     </div>
 
-                    <div class="ipt-row pc-flex">
-                        <div class="ipt-row flex-2">
+                    <div class="ipt-row flex">
+                        <div class="ipt-row">
                             <label for="birthDate">생년월일 *</label>
-                            <div class="ipt-row flex">
-                                <div class="ipt-row">                        
-                                    <input type="text" class="ipt-txt" name="birthDate" id="birthDate" value="19991111" readonly>
-                                </div>
-                                <div class="ipt-row">
-                                    <input type="radio" name="dateType" id="dateTypeA" checked disabled><label for="dateTypeA">양력</label>
-                                    <input type="radio" name="dateType" id="dateTypeB" disabled><label for="dateTypeB">음력</label>
-                                </div>
-                            </div>
+                            <input type="text" class="ipt-txt" name="birthDate" id="birthDate" value="19991111" readonly>
                         </div>
 
                         <div class="ipt-row">
@@ -175,35 +167,29 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="inner">
+                        <div class="ipt-row ipt-group">
+                            <div class="ipt-row with-btn">
+                                <label for="email">이메일 *</label>
+                                <input type="text" class="ipt-txt" name="email" id="email">
+                                <button type="button" class="btn btn-xsmall">인증요청</button>                                               
+                            </div>
+                            <div class="ipt-row">
+                                <input type="text" class="ipt-txt" name="emailAuth" id="emailAuth">
+                                <p class="ipt-noti white">03:00 남았습니다.</p>
+                                <p class="error">인증에 실패하였습니다. 다시 인증 요청을 해주세요.</p>                        
+                                <p class="ipt-noti blue">인증완료</p>   
+                            </div>
+                        </div>
 
-                    <div class="ipt-row">
-                        <label for="email">이메일 *</label>
-                        <div class="ipt-row">
-                            <input type="text" class="ipt-txt" name="email" id="email">
+                        <div class="btn-box btn-auth">
+                            <button class="btn btn-white">인증확인</button>
+                            <button class="btn btn-white" disabled>인증확인</button>
                         </div>
                     </div>
 
-                    <div class="ipt-row has-brt">
-                        <p class="label">이메일 수신여부</p>
-                        <input type="radio" name="emailNews" id="emailNewsY" checked><label for="emailNewsY">예</label>
-                        <input type="radio" name="emailNews" id="emailNewsN"><label for="emailNewsN">아니오</label>
-                    </div>
-
-                    <div class="ipt-row">
-                        <p class="label">SMS 수신여부</p>
-                        <input type="radio" name="smsNews" id="smsNewsY" checked><label for="smsNewsY">예</label>
-                        <input type="radio" name="smsNews" id="smsNewsN"><label for="smsNewsN">아니오</label>
-                    </div>
-
-                    <div class="txt-box bg-gray">
-                        <p>개인정보보호법 제22조 제3항에 따라 <마케팅 활용에 관한 동의>를 받고자 합니다.<br>
-                            1. 수집목적 : 예술의전당 기획공연, 이벤트, 할인안내 동의 다양한 정보 제공<br>
-                            2. 보유기간 : 개인정보 보유기간 만료시까지, 동의 유지기간 동안.<br>
-                            3. 이용항목 : 휴대폰 번호, 이메일 주소 (동의사항에 한함)<br>
-                            4. 동의거부시 불이익 : 고객은 동의를 거부할 권리가 있으며, 동의하지 않으실 경우 수집목적에 따른 이벤트 할인안내 등의 정보를 제공받을 수 없습니다.</p>
-                    </div>
-
-                    <div class="btn-box">
+                    <div class="btn-box has-brt">
                         <button type="button" class="btn btn-red">가입하기</button>
                         <button type="button" class="btn btn-red" disabled>가입하기</button>
                         <!--                         

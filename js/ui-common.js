@@ -133,9 +133,20 @@ $(document).ready(function(){
     })
 
     //셀렉트박스
-    $('.select-wrap .select').change(function(){
-        var txt = $(this).find('option:selected').text();
-        $(this).parent().find('.select-txt').text(txt);
+    $('.select-wrap .select-txt').click(function(){
+        var select = $(this).next('.select');
+        if(select.hasClass('open')){
+            select.removeClass('open');
+        }else {
+            select.addClass('open');
+        }
+    })
+    $('.select li').click(function(){
+        var txt = $(this).text();
+        $(this).parent().find('li').removeClass('selected');
+        $(this).addClass('selected');
+        $(this).parent().removeClass('open');
+        $(this).parent().parent().find('.select-txt').text(txt);
     })
 })
 

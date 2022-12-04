@@ -12,85 +12,6 @@
     <title>예술의 전당</title>     
 </head>
 <body>
-    <header>
-        <div class="inner">
-            <div class="logo"><img src="../images/logo.png" alt="예술의 전당 Seoul Arts Center"></div>
-
-            <!-- GNB -->
-            <div id="nav">
-                <a class="home" href="#">홈</a>    <!-- 선택된 메뉴에 selected 클래스 추가 -->
-                <span>
-                    <a class="genre" href="#">장르</a>
-                    <span class="sub-menu-wrap">
-                        <span class="sub-menu">
-                            <a href="#" class="selected">뮤지컬</a>
-                            <a href="#">오페라</a>
-                            <a href="#">클래식</a>
-                            <a href="#">무용</a>
-                            <a href="#">발레</a>
-                            <a href="#">연극</a>
-                            <a href="#">가족연극</a>
-                            <a href="#">교육</a>
-                            <a href="#">기타</a>
-                        </span>
-                    </span>
-                </span>
-                <a class="live" href="#">LIVE</a>
-                <a class="search" href="#">검색</a>
-            </div>
-            <!-- //GNB -->
-
-            <h1>시청권 구매</h1>
-            <button type="button" class="btn-close">닫기</button>
-        </div>
-    </header>
-
-    <!-- 메뉴 -->
-    <div id="menu">
-        <div class="menu-header">
-            <button type="button" class="btn-back" onclick="menuToggle()">이전</button>
-                    <p class="tit">메뉴</p>
-        </div>
-        <div class="contents">
-            <!-- 로그인 전 -->
-            <div class="account-util">
-                <p class="txt">로그인하세요.</p>
-                <button type="button" class="btn btn-red">로그인</button>
-                <p class="mw">아직 계정이 없습니까? <a class="#">지금 무료 회원가입!</a></p>
-            </div>
-            <!-- //로그인 전 -->
-
-            <!-- 로그인 후 -->
-            <div class="account-util">
-                <p class="txt mw">다음 계정으로 로그인이 되었습니다.</p>
-                <p class="txt pc">로그인 중입니다.</p>
-                <p class="name"><em>홍길동</em>님 (hongkildong)</p>
-                <dl class="subs-box mw">
-                    <dt>나의 시청권</dt>
-                    <dd>구독중인 시청권이 없습니다</dd>
-                </dl>
-                <dl class="subs-box mw">
-                    <dt>나의 시청권</dt>
-                    <dd><em>월간 정기 구독 중입니다.</em></dd>
-                </dl>
-            </div>
-            <!-- //로그인 전 -->
-
-            <div class="links">
-                <a href="#" class="pc">나의 시청권</a>
-                <a href="#">회원정보</a>
-                <a href="#">시청권 구매</a>
-                <a href="#">공지사항</a>
-                <a href="#">이용안내</a>
-                <a href="#">자주 묻는 질문</a>
-                <a href="#">약관 및 정책</a>
-                <a href="#">설정</a>
-                <a href="#" class="no-icon">로그아웃</a>
-            </div>
-        </div>
-    </div>
-    <!-- //메뉴 -->
-
     <div id="container">
         <div id="contents" class="w620"> 
                 <div class="btn-box">
@@ -101,40 +22,7 @@
             </section>           
         </div>
     </div>
-    
-    <footer class="pc">
-        <div class="inner">
-            <div class="logo"><img src="../images/logo_gray.png" alt="미디어 아트센터 Seoul Art Center"></div>
-            <div class="info-wrap">
-                <div class="links">
-                    <a href="#">서비스 이용약관</a>
-                    <a href="#">자주 묻는 질문</a>
-                    <a href="#"><em>개인정보처리방침</em></a> 
-                </div>
-                <address>
-                    (우) 06757 서울시 서초구 남부순환로 2406 예술의전당<br><br class="pc">
-                    대표자 장형준&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호 214-82-00264<br>
-                    통신판매업신고 서초 제 0706호<br>
-                    콜센터 02-580-1300 (09:00~20:00, 연중무휴)<br><br class="pc">
-                    copyrightⓒ2022 Seoul Arts Center. All rights Reserved.
-                </address>
-            </div>
-            <div class="sns-list">
-                <p>Seoul Arts Center SNS</p>
-                <ul>
-                    <li><a href="https://www.youtube.com/channel/UCUn8h6aG6rCM1zvXKIuNpVQ" target="_blank" class="yt">youtube</a></li>
-                    <li><a href="https://www.facebook.com/SeoulArtsCenter.Korea" target="_blank" class="fb">facebook</a></li>
-                    <li><a href="https://www.instagram.com/seoul_arts_center/" target="_blank" class="insta">instagram</a></li>
-                    <li><a href="https://twitter.com/I_Love_SAC" target="_blank" class="tw">twitter</a></li>
-                    <li><a href="https://blog.naver.com/i_love_sac" target="_blank" class="nblog">naver blog</a></li>
-                    <li><a href="https://tv.naver.com/seoulartscenter" target="_blank" class="ntv">naver TV</a></li>
-                    <li><a href="https://m.post.naver.com/i_love_sac?memberNo=33166497" target="_blank" class="npost">naver post</a></li>
-                    <li><a href="https://www.podbbang.com/channels/5932" target="_blank" class="pod">podbbang</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
+        
     <!-- prompt -->
     <div class="modal-wrap" data-id="modal01">
         <div class="modal alert">   <!--prompt, 확인은 alert 클래스 추가-->

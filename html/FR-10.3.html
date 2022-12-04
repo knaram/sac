@@ -17,7 +17,7 @@
             <div class="logo"><img src="../images/logo.png" alt="예술의 전당 Seoul Arts Center"></div>
 
             <!-- GNB -->
-            <div id="nav">
+            <div id="nav" class="pc">
                 <a class="nav-btn home" href="javascript:;">홈</a> <!-- 선택된 메뉴에 selected 클래스 추가 -->
                 <span class="has-sub">
                     <a class="nav-btn genre" href="javascript:;">장르</a>
@@ -92,36 +92,32 @@
         </div>
     </header>
 
-    <div id="container">
+    <div id="container" class="pb-0">
         <div id="contents" class="w620">
             <p class="page-title">회원정보 변경</p>
-            <section>
+            <section class="my-info modi">
                 <form>
                     <div class="ipt-row">
                         <label for="name">성명 *</label>
                         <input type="text" class="ipt-txt" name="name" id="name" value="홍길동" readonly>
                     </div>
 
-                    <div class="ipt-row">
-                        <label for="birthDate">생년월일 *</label>
-                        <div class="ipt-row flex">
+                    <div class="ipt-row flex">
+                        <div class="ipt-row">
+                            <label for="birthDate">생년월일 *</label>
                             <div class="ipt-row">                        
                                 <input type="text" class="ipt-txt" name="birthDate" id="birthDate" value="19991111" readonly>
                             </div>
-                            <div class="ipt-row">
-                                <input type="radio" name="dateType" id="dateTypeA" checked disabled><label for="dateTypeA">양력</label>
-                                <input type="radio" name="dateType" id="dateTypeB" disabled><label for="dateTypeB">음력</label>
-                            </div>
+                        </div>
+
+                        <div class="ipt-row">
+                            <p class="label">성별 *</p>
+                            <input type="radio" name="gender" id="genderM" checked disabled><label for="genderM">남자</label>
+                            <input type="radio" name="gender" id="genderF" disabled><label for="genderF">여자</label>
                         </div>
                     </div>
-
-                    <div class="ipt-row">
-                        <p class="label">성별 *</p>
-                        <input type="radio" name="gender" id="genderM" checked disabled><label for="genderM">남자</label>
-                        <input type="radio" name="gender" id="genderF" disabled><label for="genderF">여자</label>
-                    </div>
                     
-                    <div class="ipt-row ipt-group">
+                    <!-- <div class="ipt-row ipt-group">
                         <div class="ipt-row with-btn">
                             <label for="address">주소 *</label>
                             <input type="text" class="ipt-txt" name="address" id="address" readonly>
@@ -133,7 +129,7 @@
                         <div class="ipt-row">
                             <input type="text" class="ipt-txt" name="address" id="address3">
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="ipt-row">
                         <label for="contact">연락처(휴대폰 번호) *</label>
@@ -150,14 +146,78 @@
                         </div>
                     </div>
 
-                    <div class="ipt-row">
-                        <label for="email">이메일 *</label>
-                        <div class="ipt-row">
-                            <input type="text" class="ipt-txt" name="email" id="email">
+                    <div class="inner">
+                        <div class="ipt-row ipt-group">
+                            <div class="ipt-row with-btn">
+                                <label for="email">이메일 *</label>
+                                <input type="text" class="ipt-txt" name="email" id="email">
+                                <button type="button" class="btn btn-xsmall">인증요청</button>                                               
+                            </div>
+                            <div class="ipt-row">
+                                <input type="text" class="ipt-txt" name="emailAuth" id="emailAuth">
+                                <p class="ipt-noti white">03:00 남았습니다.</p>
+                                <p class="error">인증에 실패하였습니다. 다시 인증 요청을 해주세요.</p>                        
+                                <p class="ipt-noti blue">인증완료</p>   
+                            </div>
+                        </div>
+
+                        <div class="btn-box btn-auth">
+                            <button class="btn btn-white">인증확인</button>
+                            <button class="btn btn-white" disabled>인증확인</button>
                         </div>
                     </div>
 
-                    <div class="btn-box">
+                    <div class="info-box has-brt">
+                        <h3>SNS 연동</h3>
+                        <div class="ipt-row pc-flex">
+                            <p class="label">네이버</p>
+                            <div class="ipt-row">
+                                <input type="radio" name="naver" id="naverY" checked><label for="naverY">연동</label>
+                                <input type="radio" name="naver" id="naverN"><label for="naverN">미연동</label>
+                            </div>
+                        </div>
+                        <div class="ipt-row pc-flex">
+                            <p class="label">카카오톡</p>
+                            <div class="ipt-row">
+                                <input type="radio" name="kakao" id="kakaoY" checked><label for="kakaoY">연동</label>
+                                <input type="radio" name="kakao" id="kakaoN"><label for="kakaoN">미연동</label>
+                            </div>
+                        </div>
+                        <div class="ipt-row pc-flex">
+                            <p class="label">디지털원패스</p>
+                            <div class="ipt-row">
+                                <input type="radio" name="one" id="oneY" checked><label for="oneY">연동</label>
+                                <input type="radio" name="one" id="oneN"><label for="oneN">미연동</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box has-brt">
+                        <h3>마케팅 정보 수신 동의</h3>
+                        <div class="ipt-row pc-flex">
+                            <p class="label"><a href="javascript:;">[선택] 마케팅 활용 및 수신 동의 <span class="btn-txt white">&#xE001;</span></a></p>
+                            <div class="ipt-row">
+                                <input type="radio" name="agree" id="agreeY" checked><label for="agreeY">동의</label>
+                                <input type="radio" name="agree" id="agreeN"><label for="agreeN">미동의</label>
+                            </div>
+                        </div>
+                        <div class="ipt-row pc-flex">
+                            <p class="label">이메일 수신여부</p>
+                            <div class="ipt-row">
+                                <input type="radio" name="emailAgree" id="emailAgreeY" checked><label for="emailAgreeY">동의</label>
+                                <input type="radio" name="emailAgree" id="emailAgreeN"><label for="emailAgreeN">미동의</label>
+                            </div>
+                        </div>
+                        <div class="ipt-row pc-flex">
+                            <p class="label">SMS 수신여부</p>
+                            <div class="ipt-row">
+                                <input type="radio" name="smsAgree" id="smsAgreeY" checked><label for="smsAgreeY">동의</label>
+                                <input type="radio" name="smsAgree" id="smsAgreeN"><label for="smsAgreeN">미동의</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-box has-brt">
                         <button type="button" class="btn btn-xsmall pc">취소</button>
                         <button type="button" class="btn btn-red">저장하기</button>
                     </div>

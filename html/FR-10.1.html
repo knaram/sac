@@ -17,7 +17,7 @@
             <div class="logo"><img src="../images/logo.png" alt="예술의 전당 Seoul Arts Center"></div>
 
             <!-- GNB -->
-            <div id="nav">
+            <div id="nav" class="pc">
                 <a class="nav-btn home" href="javascript:;">홈</a> <!-- 선택된 메뉴에 selected 클래스 추가 -->
                 <span class="has-sub">
                     <a class="nav-btn genre" href="javascript:;">장르</a>
@@ -127,16 +127,28 @@
                         <span class="txt">(우) 06757 서울시 서초구 남부순환로 2406 (서초동 700)</span>
                     </li> -->
                     <li>
+                        <div class="info-box status">
+                            <h3>SNS 연동</h3>
+                            <dl>
+                                <dt>네이버</dt>
+                                <dd class="on">연동</dd>
+                                <dt>카카오톡</dt>
+                                <dd>미연동</dd>
+                                <dt>디지털원패스</dt>
+                                <dd>미연동</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
                         <div class="info-box">
                             <h3>마케팅 정보 수신 동의</h3>
                             <p class="sub-txt">수신동의를 하시면 Digital 예술의전당에서 제공하는 다양한 프로모션과 이벤트/신규 콘텐츠 등의 정보를 만나실 수 있습니다.</p>
                             <ul class="chk-list">
                                 <li class="checkAll">
-                                    <input type="checkbox" class="type2" name="marketing" id="marketingAll"><label for="marketingAll" onclick="checkAll();"><span class="blind">[선택] 마케팅 활용 및 수신 동의</span></label>
-                                    <a href="#">[선택] 마케팅 활용 및 수신 동의 <span class="btn-txt">&#xE001;</span></a>
+                                    <input type="checkbox" class="type2" name="marketing" id="marketingAll" disabled><label for="marketingAll" <!--onclick="checkAll();-->">[선택] 마케팅 활용 및 수신 동의</label>
                                 </li>
-                                <li class="pl-20"><input type="checkbox" class="type2" name="marketing" id="marketingA"><label for="marketingA">이메일 수신 동의</label></li>
-                                <li class="pl-20"><input type="checkbox" class="type2" name="marketing" id="marketingB"><label for="marketingB">SMS 수신 동의</label></li>
+                                <li class="pl-20"><input type="checkbox" class="type2" name="marketing" id="marketingA" checked disabled><label for="marketingA">이메일 수신 동의</label></li>
+                                <li class="pl-20"><input type="checkbox" class="type2" name="marketing" id="marketingB" disabled><label for="marketingB">SMS 수신 동의</label></li>
                             </ul>
                         </div>
                     </li>
@@ -149,7 +161,7 @@
                 <p class="info-box">********</p></p>
 
                 <h2>회원탈퇴</h2>
-                <p class="info-box"><a href="#" class="txt-red">탈퇴하기</a></p>
+                <p class="info-box"><a href="#" class="txt-gray2">탈퇴하기</a></p>
             </section>
         </div> 
     </div>
