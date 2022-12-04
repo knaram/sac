@@ -73,9 +73,12 @@ $(document).ready(function(){
             if($('.sub-menu-wrap').hasClass('show')){
                 $(this).next('.sub-menu-wrap').removeClass('show');    
                 $('html').attr('style','');
+                nav.removeClass('selected');
             }else {
                 $(this).next('.sub-menu-wrap').addClass('show');
                 $('html').attr('style','height:100%; overflow:hidden;');
+                nav.removeClass('selected');
+                $(this).addClass('selected');
             }  
         }                  
     })   

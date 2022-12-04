@@ -257,6 +257,7 @@ header .btn-close {position:absolute; right:20px; top:50%; transform:translateY(
 #nav .nav-btn.selected.search:before {background-position:-78px -24px;}
 #nav .sub-menu-wrap {display:none; position:fixed; left:0; top:46px; width:100%; height:calc(100% - 126px); background:#0D0D0D; z-index:2; padding:20px; box-sizing:border-box; overflow-y:scroll;}
 #nav .sub-menu-wrap.show {display:block;}
+#nav .sub-menu-wrap .title {position:fixed; left:0; top:0; width:100%; height:46px; background:#0D0D0D; z-index:2; text-align:center; font-size:1.8rem; line-height:4.6rem;}
 #nav .sub-menu-wrap a {display:inline-block; width:100%; background:#3D3D3D; border-radius:4px; line-height:4.4rem; height:44px; padding:0 12px; font-size:1.5rem; transition:all .3s; box-sizing:border-box; text-align:center; font-weight:500;}
 #nav .sub-menu-wrap a + a {margin-top:10px;}
 
@@ -679,7 +680,7 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
     header .btn-util-menu {right:0;}
     header .btn-back {display:none;}
     #nav > span {position:relative; display:inline-block; cursor:pointer;}
-    #nav .sub-menu-wrap {display:none; position:absolute; top:44px; left:0; width:160px; height:auto; background:none; padding:40px 0 0; box-sizing:border-box;}
+    #nav .sub-menu-wrap {display:none; position:absolute; top:10px; left:0; width:160px; height:auto; background:none; padding:40px 0 0; box-sizing:border-box;}
     #nav .sub-menu {display:block; padding:11px 0; box-sizing:border-box; background:#252525;}
     #nav .sub-menu a {display:block; text-align:left; font-size:1.5rem; line-height:1.5rem; width:100%; height:auto; background:none; border-radius:0; padding:9px 24px; box-sizing:border-box; text-align:left;}
     #nav .sub-menu a:hover {background:#3D3D3D;}
@@ -758,8 +759,8 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
     .list.horizontal li:nth-child(2n) {margin-left:40px;}
     .list.horizontal li + li {margin-top:40px;}
     .list.horizontal li a {overflow:visible;}
-    .list.horizontal .img-box {width:220px;}
-    .list.horizontal .info {width:calc(100% - 240px); padding-left:20px; top:15px; transform:translateY(0);}    
+    .list.horizontal .img-box {width:200px;}
+    .list.horizontal .info {width:calc(100% - 220px); padding-left:20px; top:15px; transform:translateY(0);}    
     .list.horizontal .tit {max-height:50px;}    
 
     .list.one-card .tit {height:25px; line-height:2.5rem;}
@@ -811,7 +812,9 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
     .join-agree {font-size:1.5rem; line-height:2rem;}     
     .join-agree .txt-box p {font-size:1.8rem;}    
     .join-agree .txt-box label {font-size:2rem;}
+    .join-agree .txt-box.bg-gray {padding:32px 0;}
     .join-agree .txt-box.bg-gray label {font-size:2rem;}
+    .join-agree .txt-box.bg-gray p {font-size:1.8rem;}
     .join-agree .txt-box {padding:20px 0; margin-bottom:0;}   
     .join-agree .txt-box.flex {display:block; margin-top:20px;}    
     .join-agree .txt-box.flex p {width:120px;}
@@ -957,7 +960,7 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
     .subscribe .list li .info .subs,
     .subscribe .list li .info dl dd {font-size:2rem;}
     
-    .subscribe .list-head span:nth-child(1) {width: 110px;}
+    .subscribe .list-head span:nth-child(1) {width:110px;}
     .subscribe .list-head span:nth-child(2) {width:calc(100% - 706px);}
     .subscribe .list-head span:nth-child(3) {width:140px}
     .subscribe .list-head span:nth-child(4) {width:230px;}
