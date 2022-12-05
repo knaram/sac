@@ -682,7 +682,7 @@ section.terms .title-box .select-wrap {position:absolute; top:-4px; right:0;}
     header .btn-util-menu {right:0;}
     header .btn-back {display:none;}
     #nav > span {position:relative; display:inline-block; cursor:pointer;}
-    #nav .sub-menu-wrap {display:none; position:absolute; top:10px; left:0; width:160px; height:auto; background:none; padding:40px 0 0; box-sizing:border-box;}
+    #nav .sub-menu-wrap {display:none; position:absolute; top:10px; left:0; width:160px; height:auto; background:none; padding:40px 0 0; box-sizing:border-box; overflow:hidden;}
     #nav .sub-menu {display:block; padding:11px 0; box-sizing:border-box; background:#252525;}
     #nav .sub-menu a {display:block; text-align:left; font-size:1.5rem; line-height:1.5rem; width:100%; height:auto; background:none; border-radius:0; padding:9px 24px; box-sizing:border-box; text-align:left;}
     #nav .sub-menu a:hover {background:#3D3D3D;}
